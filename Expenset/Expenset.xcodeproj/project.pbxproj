@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E47C9A62B1DDE66002E213E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9A52B1DDE66002E213E /* HomeViewController.swift */; };
+		8E47C9A82B1DDE77002E213E /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9A72B1DDE77002E213E /* TransactionViewController.swift */; };
+		8E47C9AA2B1DDE84002E213E /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9A92B1DDE84002E213E /* CreateViewController.swift */; };
+		8E47C9AC2B1DDE8F002E213E /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9AB2B1DDE8F002E213E /* ReportViewController.swift */; };
+		8E47C9AE2B1DDF8C002E213E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9AD2B1DDF8C002E213E /* ProfileViewController.swift */; };
 		8E931F072B0C6AF0005EF0AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E931F062B0C6AF0005EF0AA /* AppDelegate.swift */; };
 		8E931F092B0C6AF0005EF0AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E931F082B0C6AF0005EF0AA /* SceneDelegate.swift */; };
 		8E931F0B2B0C6AF0005EF0AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E931F0A2B0C6AF0005EF0AA /* ViewController.swift */; };
@@ -22,6 +27,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E47C9A52B1DDE66002E213E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8E47C9A72B1DDE77002E213E /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
+		8E47C9A92B1DDE84002E213E /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		8E47C9AB2B1DDE8F002E213E /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		8E47C9AD2B1DDF8C002E213E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8E931F032B0C6AF0005EF0AA /* Expenset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expenset.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E931F062B0C6AF0005EF0AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E931F082B0C6AF0005EF0AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +97,7 @@
 		8E931F252B1DA175005EF0AA /* Home Screen */ = {
 			isa = PBXGroup;
 			children = (
+				8E47C9A52B1DDE66002E213E /* HomeViewController.swift */,
 			);
 			path = "Home Screen";
 			sourceTree = "<group>";
@@ -108,6 +119,7 @@
 		8E931F272B1DA1AA005EF0AA /* Transaction Screen */ = {
 			isa = PBXGroup;
 			children = (
+				8E47C9A72B1DDE77002E213E /* TransactionViewController.swift */,
 			);
 			path = "Transaction Screen";
 			sourceTree = "<group>";
@@ -115,6 +127,7 @@
 		8E931F282B1DA2C3005EF0AA /* Create Screen */ = {
 			isa = PBXGroup;
 			children = (
+				8E47C9A92B1DDE84002E213E /* CreateViewController.swift */,
 			);
 			path = "Create Screen";
 			sourceTree = "<group>";
@@ -122,6 +135,7 @@
 		8E931F292B1DA2D6005EF0AA /* Report Screen */ = {
 			isa = PBXGroup;
 			children = (
+				8E47C9AB2B1DDE8F002E213E /* ReportViewController.swift */,
 			);
 			path = "Report Screen";
 			sourceTree = "<group>";
@@ -129,6 +143,7 @@
 		8E931F2A2B1DA2E0005EF0AA /* Profile Screen */ = {
 			isa = PBXGroup;
 			children = (
+				8E47C9AD2B1DDF8C002E213E /* ProfileViewController.swift */,
 			);
 			path = "Profile Screen";
 			sourceTree = "<group>";
@@ -250,8 +265,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E47C9AC2B1DDE8F002E213E /* ReportViewController.swift in Sources */,
+				8E47C9A62B1DDE66002E213E /* HomeViewController.swift in Sources */,
+				8E47C9A82B1DDE77002E213E /* TransactionViewController.swift in Sources */,
+				8E47C9AA2B1DDE84002E213E /* CreateViewController.swift in Sources */,
 				8E931F312B1DA3C9005EF0AA /* FirebaseModel.swift in Sources */,
 				8E931F0B2B0C6AF0005EF0AA /* ViewController.swift in Sources */,
+				8E47C9AE2B1DDF8C002E213E /* ProfileViewController.swift in Sources */,
 				8E931F072B0C6AF0005EF0AA /* AppDelegate.swift in Sources */,
 				8E931F092B0C6AF0005EF0AA /* SceneDelegate.swift in Sources */,
 			);

@@ -54,5 +54,11 @@ struct Category {
 }
 
 struct Transaction {
-    
+    @DocumentID var id: String?
+    var amount: Double
+    var category: Category
+    var description: String?
+    var createdTime: Date
+    var location: String? // city name
+    var image: String? // image link
 }
