@@ -12,6 +12,30 @@
 		8E47C9AA2B1DDE84002E213E /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9A92B1DDE84002E213E /* CreateViewController.swift */; };
 		8E47C9AC2B1DDE8F002E213E /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9AB2B1DDE8F002E213E /* ReportViewController.swift */; };
 		8E47C9AE2B1DDF8C002E213E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9AD2B1DDF8C002E213E /* ProfileViewController.swift */; };
+		8E47C9B02B1E898F002E213E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9AF2B1E898F002E213E /* LoginViewController.swift */; };
+		8E47C9B22B1E899D002E213E /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9B12B1E899D002E213E /* SignupViewController.swift */; };
+		8E47C9B42B1E89C8002E213E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9B32B1E89C8002E213E /* LoginView.swift */; };
+		8E47C9B62B1E89D9002E213E /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9B52B1E89D9002E213E /* SignupView.swift */; };
+		8E47C9B92B1E92DC002E213E /* SignupFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9B82B1E92DC002E213E /* SignupFirebaseManager.swift */; };
+		8E47C9BB2B1E9464002E213E /* SignupLoadingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9BA2B1E9464002E213E /* SignupLoadingManager.swift */; };
+		8E47C9BE2B1E96A5002E213E /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9BD2B1E96A5002E213E /* LoadingViewController.swift */; };
+		8E47C9C02B1E96B7002E213E /* LoadingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9BF2B1E96B7002E213E /* LoadingDelegate.swift */; };
+		8E47C9C22B1EA6F9002E213E /* SignupPhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9C12B1EA6F9002E213E /* SignupPhotoManager.swift */; };
+		8E47C9C52B1EA99C002E213E /* LoginLoadingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9C42B1EA99C002E213E /* LoginLoadingManager.swift */; };
+		8E47C9C72B1EA9F3002E213E /* LoginFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9C62B1EA9F3002E213E /* LoginFirebaseManager.swift */; };
+		8E47C9CB2B1EB00F002E213E /* BaseFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9CA2B1EB00F002E213E /* BaseFirebaseManager.swift */; };
+		8E47C9CD2B1EE134002E213E /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9CC2B1EE134002E213E /* CreateView.swift */; };
+		8E47C9CF2B1EE26F002E213E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9CE2B1EE26F002E213E /* HomeView.swift */; };
+		8E47C9D12B1EE31D002E213E /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9D02B1EE31D002E213E /* TransactionView.swift */; };
+		8E47C9D32B1EE423002E213E /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9D22B1EE423002E213E /* ReportView.swift */; };
+		8E47C9D52B1EE433002E213E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9D42B1EE433002E213E /* ProfileView.swift */; };
+		8E47C9D72B1EE4AA002E213E /* AddNewCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9D62B1EE4AA002E213E /* AddNewCategoryView.swift */; };
+		8E47C9D92B1EE8CA002E213E /* Comfortaa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E47C9D82B1EE8CA002E213E /* Comfortaa-Regular.ttf */; };
+		8E47C9DC2B1EEC12002E213E /* Comfortaa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9DB2B1EEC12002E213E /* Comfortaa.swift */; };
+		8E47C9E22B1FC522002E213E /* Comfortaa-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E47C9DD2B1FC521002E213E /* Comfortaa-Medium.ttf */; };
+		8E47C9E32B1FC522002E213E /* Comfortaa-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E47C9DE2B1FC521002E213E /* Comfortaa-SemiBold.ttf */; };
+		8E47C9E42B1FC522002E213E /* Comfortaa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E47C9DF2B1FC522002E213E /* Comfortaa-Light.ttf */; };
+		8E47C9E62B1FC522002E213E /* Comfortaa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E47C9E12B1FC522002E213E /* Comfortaa-Bold.ttf */; };
 		8E931F072B0C6AF0005EF0AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E931F062B0C6AF0005EF0AA /* AppDelegate.swift */; };
 		8E931F092B0C6AF0005EF0AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E931F082B0C6AF0005EF0AA /* SceneDelegate.swift */; };
 		8E931F0B2B0C6AF0005EF0AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E931F0A2B0C6AF0005EF0AA /* ViewController.swift */; };
@@ -32,6 +56,30 @@
 		8E47C9A92B1DDE84002E213E /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		8E47C9AB2B1DDE8F002E213E /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		8E47C9AD2B1DDF8C002E213E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8E47C9AF2B1E898F002E213E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8E47C9B12B1E899D002E213E /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		8E47C9B32B1E89C8002E213E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		8E47C9B52B1E89D9002E213E /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		8E47C9B82B1E92DC002E213E /* SignupFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFirebaseManager.swift; sourceTree = "<group>"; };
+		8E47C9BA2B1E9464002E213E /* SignupLoadingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupLoadingManager.swift; sourceTree = "<group>"; };
+		8E47C9BD2B1E96A5002E213E /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		8E47C9BF2B1E96B7002E213E /* LoadingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingDelegate.swift; sourceTree = "<group>"; };
+		8E47C9C12B1EA6F9002E213E /* SignupPhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPhotoManager.swift; sourceTree = "<group>"; };
+		8E47C9C42B1EA99C002E213E /* LoginLoadingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLoadingManager.swift; sourceTree = "<group>"; };
+		8E47C9C62B1EA9F3002E213E /* LoginFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFirebaseManager.swift; sourceTree = "<group>"; };
+		8E47C9CA2B1EB00F002E213E /* BaseFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseFirebaseManager.swift; sourceTree = "<group>"; };
+		8E47C9CC2B1EE134002E213E /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
+		8E47C9CE2B1EE26F002E213E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8E47C9D02B1EE31D002E213E /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
+		8E47C9D22B1EE423002E213E /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
+		8E47C9D42B1EE433002E213E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		8E47C9D62B1EE4AA002E213E /* AddNewCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCategoryView.swift; sourceTree = "<group>"; };
+		8E47C9D82B1EE8CA002E213E /* Comfortaa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Regular.ttf"; sourceTree = "<group>"; };
+		8E47C9DB2B1EEC12002E213E /* Comfortaa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comfortaa.swift; sourceTree = "<group>"; };
+		8E47C9DD2B1FC521002E213E /* Comfortaa-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Medium.ttf"; sourceTree = "<group>"; };
+		8E47C9DE2B1FC521002E213E /* Comfortaa-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-SemiBold.ttf"; sourceTree = "<group>"; };
+		8E47C9DF2B1FC522002E213E /* Comfortaa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Light.ttf"; sourceTree = "<group>"; };
+		8E47C9E12B1FC522002E213E /* Comfortaa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Bold.ttf"; sourceTree = "<group>"; };
 		8E931F032B0C6AF0005EF0AA /* Expenset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expenset.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E931F062B0C6AF0005EF0AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E931F082B0C6AF0005EF0AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +107,86 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E47C9B72B1E8A31002E213E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8E47C9B82B1E92DC002E213E /* SignupFirebaseManager.swift */,
+				8E47C9BA2B1E9464002E213E /* SignupLoadingManager.swift */,
+				8E47C9C12B1EA6F9002E213E /* SignupPhotoManager.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8E47C9BC2B1E9655002E213E /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				8E47C9BD2B1E96A5002E213E /* LoadingViewController.swift */,
+				8E47C9BF2B1E96B7002E213E /* LoadingDelegate.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		8E47C9C32B1EA93D002E213E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8E47C9C42B1EA99C002E213E /* LoginLoadingManager.swift */,
+				8E47C9C62B1EA9F3002E213E /* LoginFirebaseManager.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8E47C9C82B1EAC2F002E213E /* Base Screen */ = {
+			isa = PBXGroup;
+			children = (
+				8E47C9C92B1EAC44002E213E /* Extension */,
+				8E931F0A2B0C6AF0005EF0AA /* ViewController.swift */,
+			);
+			path = "Base Screen";
+			sourceTree = "<group>";
+		};
+		8E47C9C92B1EAC44002E213E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8E47C9CA2B1EB00F002E213E /* BaseFirebaseManager.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8E47C9DA2B1EE8F9002E213E /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				8E47C9E12B1FC522002E213E /* Comfortaa-Bold.ttf */,
+				8E47C9DF2B1FC522002E213E /* Comfortaa-Light.ttf */,
+				8E47C9DD2B1FC521002E213E /* Comfortaa-Medium.ttf */,
+				8E47C9DE2B1FC521002E213E /* Comfortaa-SemiBold.ttf */,
+				8E47C9D82B1EE8CA002E213E /* Comfortaa-Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		8E47C9E72B1FDF9E002E213E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8E47C9E82B1FDFA5002E213E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E47C9CE2B1EE26F002E213E /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E47C9E92B1FEC79002E213E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E47C9D02B1EE31D002E213E /* TransactionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8E931EFA2B0C6AF0005EF0AA = {
 			isa = PBXGroup;
 			children = (
@@ -78,13 +206,14 @@
 		8E931F052B0C6AF0005EF0AA /* Expenset */ = {
 			isa = PBXGroup;
 			children = (
+				8E47C9DA2B1EE8F9002E213E /* Font */,
+				8E47C9BC2B1E9655002E213E /* Loading */,
 				8E931F2F2B1DA3AF005EF0AA /* Constant */,
 				8E931F2E2B1DA332005EF0AA /* Utils */,
 				8E931F2D2B1DA32A005EF0AA /* Firebase */,
 				8E931F262B1DA182005EF0AA /* Screens */,
 				8E931F062B0C6AF0005EF0AA /* AppDelegate.swift */,
 				8E931F082B0C6AF0005EF0AA /* SceneDelegate.swift */,
-				8E931F0A2B0C6AF0005EF0AA /* ViewController.swift */,
 				8E931F0C2B0C6AF0005EF0AA /* Main.storyboard */,
 				8E931F0F2B0C6AF1005EF0AA /* Assets.xcassets */,
 				8E931F112B0C6AF1005EF0AA /* LaunchScreen.storyboard */,
@@ -97,6 +226,8 @@
 		8E931F252B1DA175005EF0AA /* Home Screen */ = {
 			isa = PBXGroup;
 			children = (
+				8E47C9E82B1FDFA5002E213E /* View */,
+				8E47C9E72B1FDF9E002E213E /* Extension */,
 				8E47C9A52B1DDE66002E213E /* HomeViewController.swift */,
 			);
 			path = "Home Screen";
@@ -105,6 +236,7 @@
 		8E931F262B1DA182005EF0AA /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				8E47C9C82B1EAC2F002E213E /* Base Screen */,
 				8E931F2C2B1DA31C005EF0AA /* Signup Screen */,
 				8E931F2B2B1DA30C005EF0AA /* Login Screen */,
 				8E931F252B1DA175005EF0AA /* Home Screen */,
@@ -119,6 +251,7 @@
 		8E931F272B1DA1AA005EF0AA /* Transaction Screen */ = {
 			isa = PBXGroup;
 			children = (
+				8E47C9E92B1FEC79002E213E /* View */,
 				8E47C9A72B1DDE77002E213E /* TransactionViewController.swift */,
 			);
 			path = "Transaction Screen";
@@ -128,6 +261,8 @@
 			isa = PBXGroup;
 			children = (
 				8E47C9A92B1DDE84002E213E /* CreateViewController.swift */,
+				8E47C9CC2B1EE134002E213E /* CreateView.swift */,
+				8E47C9D62B1EE4AA002E213E /* AddNewCategoryView.swift */,
 			);
 			path = "Create Screen";
 			sourceTree = "<group>";
@@ -136,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				8E47C9AB2B1DDE8F002E213E /* ReportViewController.swift */,
+				8E47C9D22B1EE423002E213E /* ReportView.swift */,
 			);
 			path = "Report Screen";
 			sourceTree = "<group>";
@@ -144,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				8E47C9AD2B1DDF8C002E213E /* ProfileViewController.swift */,
+				8E47C9D42B1EE433002E213E /* ProfileView.swift */,
 			);
 			path = "Profile Screen";
 			sourceTree = "<group>";
@@ -151,6 +288,9 @@
 		8E931F2B2B1DA30C005EF0AA /* Login Screen */ = {
 			isa = PBXGroup;
 			children = (
+				8E47C9C32B1EA93D002E213E /* Extension */,
+				8E47C9AF2B1E898F002E213E /* LoginViewController.swift */,
+				8E47C9B32B1E89C8002E213E /* LoginView.swift */,
 			);
 			path = "Login Screen";
 			sourceTree = "<group>";
@@ -158,6 +298,9 @@
 		8E931F2C2B1DA31C005EF0AA /* Signup Screen */ = {
 			isa = PBXGroup;
 			children = (
+				8E47C9B72B1E8A31002E213E /* Extension */,
+				8E47C9B12B1E899D002E213E /* SignupViewController.swift */,
+				8E47C9B52B1E89D9002E213E /* SignupView.swift */,
 			);
 			path = "Signup Screen";
 			sourceTree = "<group>";
@@ -180,6 +323,7 @@
 		8E931F2F2B1DA3AF005EF0AA /* Constant */ = {
 			isa = PBXGroup;
 			children = (
+				8E47C9DB2B1EEC12002E213E /* Comfortaa.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -251,9 +395,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E47C9E42B1FC522002E213E /* Comfortaa-Light.ttf in Resources */,
 				8E931F132B0C6AF1005EF0AA /* LaunchScreen.storyboard in Resources */,
+				8E47C9E62B1FC522002E213E /* Comfortaa-Bold.ttf in Resources */,
+				8E47C9D92B1EE8CA002E213E /* Comfortaa-Regular.ttf in Resources */,
 				8E931F102B0C6AF1005EF0AA /* Assets.xcassets in Resources */,
 				8E931F0E2B0C6AF0005EF0AA /* Main.storyboard in Resources */,
+				8E47C9E32B1FC522002E213E /* Comfortaa-SemiBold.ttf in Resources */,
+				8E47C9E22B1FC522002E213E /* Comfortaa-Medium.ttf in Resources */,
 				8E931F1B2B0C6B4B005EF0AA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,15 +414,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E47C9CD2B1EE134002E213E /* CreateView.swift in Sources */,
+				8E47C9CB2B1EB00F002E213E /* BaseFirebaseManager.swift in Sources */,
+				8E47C9D72B1EE4AA002E213E /* AddNewCategoryView.swift in Sources */,
 				8E47C9AC2B1DDE8F002E213E /* ReportViewController.swift in Sources */,
+				8E47C9C02B1E96B7002E213E /* LoadingDelegate.swift in Sources */,
 				8E47C9A62B1DDE66002E213E /* HomeViewController.swift in Sources */,
+				8E47C9B22B1E899D002E213E /* SignupViewController.swift in Sources */,
+				8E47C9BE2B1E96A5002E213E /* LoadingViewController.swift in Sources */,
 				8E47C9A82B1DDE77002E213E /* TransactionViewController.swift in Sources */,
+				8E47C9C72B1EA9F3002E213E /* LoginFirebaseManager.swift in Sources */,
+				8E47C9C22B1EA6F9002E213E /* SignupPhotoManager.swift in Sources */,
 				8E47C9AA2B1DDE84002E213E /* CreateViewController.swift in Sources */,
 				8E931F312B1DA3C9005EF0AA /* FirebaseModel.swift in Sources */,
+				8E47C9B92B1E92DC002E213E /* SignupFirebaseManager.swift in Sources */,
+				8E47C9B42B1E89C8002E213E /* LoginView.swift in Sources */,
+				8E47C9D52B1EE433002E213E /* ProfileView.swift in Sources */,
+				8E47C9DC2B1EEC12002E213E /* Comfortaa.swift in Sources */,
 				8E931F0B2B0C6AF0005EF0AA /* ViewController.swift in Sources */,
 				8E47C9AE2B1DDF8C002E213E /* ProfileViewController.swift in Sources */,
 				8E931F072B0C6AF0005EF0AA /* AppDelegate.swift in Sources */,
+				8E47C9D12B1EE31D002E213E /* TransactionView.swift in Sources */,
+				8E47C9D32B1EE423002E213E /* ReportView.swift in Sources */,
+				8E47C9B02B1E898F002E213E /* LoginViewController.swift in Sources */,
+				8E47C9BB2B1E9464002E213E /* SignupLoadingManager.swift in Sources */,
+				8E47C9B62B1E89D9002E213E /* SignupView.swift in Sources */,
 				8E931F092B0C6AF0005EF0AA /* SceneDelegate.swift in Sources */,
+				8E47C9CF2B1EE26F002E213E /* HomeView.swift in Sources */,
+				8E47C9C52B1EA99C002E213E /* LoginLoadingManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
