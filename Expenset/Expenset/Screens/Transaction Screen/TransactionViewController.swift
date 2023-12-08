@@ -8,23 +8,75 @@
 import UIKit
 
 class TransactionViewController: UIViewController {
-
+    
+    var timeRangeMenuItems: [UIAction]!
+    var timeRangeMenu: UIMenu!
+    
+    var categoryMenuItems: [UIAction]!
+    var categoryMenu: UIMenu!
+    
+    let transactionView = TransactionView()
+    
+    override func loadView() {
+        view = transactionView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Transaction"
-        // Do any additional setup after loading the view.
+        
+        setupMenu()
+        
+        self.transactionView.addNewCategoryButton.addTarget(self, action: #selector(addNewCategoryButtonTapped), for: .touchUpInside)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc private func addNewCategoryButtonTapped() {
+        let vc = AddNewCategoryViewController()
+        vc.modalPresentationStyle = .pageSheet
+        vc.sheetPresentationController?.detents = [.medium()]
+        present(vc, animated: true)
     }
-    */
+    
+    func setupMenu() {
+        timeRangeMenuItems = [
+            UIAction(title: "Today", handler: { (_) in
+        }),
+            UIAction(title: "Week", handler: { (_) in
+        }),
+            UIAction(title: "Month", handler: { (_) in
+        }),
+            UIAction(title: "Year", handler: { (_) in
+        }),
+            UIAction(title: "All", handler: { (_) in
+        }),
+        ]
+        
+        timeRangeMenu = UIMenu(title: "", image: nil, identifier: nil, options: [], children: timeRangeMenuItems)
+        timeRangeMenu.preferredElementSize = .large
+        
+        self.transactionView.timeRangeMenuButton.menu = timeRangeMenu
+        self.transactionView.timeRangeMenuButton.showsMenuAsPrimaryAction = true
+        
+        categoryMenuItems = [
+            UIAction(title: "Today", handler: { (_) in
+        }),
+            UIAction(title: "Week", handler: { (_) in
+        }),
+            UIAction(title: "Month", handler: { (_) in
+        }),
+            UIAction(title: "Year", handler: { (_) in
+        }),
+            UIAction(title: "All", handler: { (_) in
+        }),
+        ]
+    
+        categoryMenu = UIMenu(title: "", image: nil, identifier: nil, options: [], children: categoryMenuItems)
+        categoryMenu.preferredElementSize = .large
+        
+        self.transactionView.categoryMenuButton.menu = categoryMenu
+        self.transactionView.categoryMenuButton.showsMenuAsPrimaryAction = true
+    }
 
 }
+

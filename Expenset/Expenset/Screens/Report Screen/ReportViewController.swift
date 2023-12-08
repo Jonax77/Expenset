@@ -8,7 +8,13 @@
 import UIKit
 
 class ReportViewController: UIViewController {
-
+    
+    let vv = TransactionDetailView()
+    
+    override func loadView() {
+        view = vv
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

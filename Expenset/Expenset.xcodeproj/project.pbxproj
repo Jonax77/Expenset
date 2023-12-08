@@ -29,13 +29,19 @@
 		8E47C9D12B1EE31D002E213E /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9D02B1EE31D002E213E /* TransactionView.swift */; };
 		8E47C9D32B1EE423002E213E /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9D22B1EE423002E213E /* ReportView.swift */; };
 		8E47C9D52B1EE433002E213E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9D42B1EE433002E213E /* ProfileView.swift */; };
-		8E47C9D72B1EE4AA002E213E /* AddNewCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9D62B1EE4AA002E213E /* AddNewCategoryView.swift */; };
 		8E47C9D92B1EE8CA002E213E /* Comfortaa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E47C9D82B1EE8CA002E213E /* Comfortaa-Regular.ttf */; };
 		8E47C9DC2B1EEC12002E213E /* Comfortaa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9DB2B1EEC12002E213E /* Comfortaa.swift */; };
 		8E47C9E22B1FC522002E213E /* Comfortaa-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E47C9DD2B1FC521002E213E /* Comfortaa-Medium.ttf */; };
 		8E47C9E32B1FC522002E213E /* Comfortaa-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E47C9DE2B1FC521002E213E /* Comfortaa-SemiBold.ttf */; };
 		8E47C9E42B1FC522002E213E /* Comfortaa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E47C9DF2B1FC522002E213E /* Comfortaa-Light.ttf */; };
 		8E47C9E62B1FC522002E213E /* Comfortaa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E47C9E12B1FC522002E213E /* Comfortaa-Bold.ttf */; };
+		8E47C9EB2B1FECE3002E213E /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9EA2B1FECE3002E213E /* TransactionTableViewCell.swift */; };
+		8E47C9ED2B203CC9002E213E /* AddNewCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9EC2B203CC9002E213E /* AddNewCategoryView.swift */; };
+		8E47C9EF2B205491002E213E /* AddNewCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9EE2B205491002E213E /* AddNewCategoryViewController.swift */; };
+		8E47C9F12B216D2F002E213E /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9F02B216D2F002E213E /* DateFormatter.swift */; };
+		8E47C9F32B217085002E213E /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9F22B217085002E213E /* Config.swift */; };
+		8E47C9F52B217167002E213E /* TransactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9F42B217167002E213E /* TransactionDetailView.swift */; };
+		8E47C9F72B227BDB002E213E /* TransactionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9F62B227BDB002E213E /* TransactionDetailViewController.swift */; };
 		8E931F072B0C6AF0005EF0AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E931F062B0C6AF0005EF0AA /* AppDelegate.swift */; };
 		8E931F092B0C6AF0005EF0AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E931F082B0C6AF0005EF0AA /* SceneDelegate.swift */; };
 		8E931F0B2B0C6AF0005EF0AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E931F0A2B0C6AF0005EF0AA /* ViewController.swift */; };
@@ -73,13 +79,19 @@
 		8E47C9D02B1EE31D002E213E /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
 		8E47C9D22B1EE423002E213E /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
 		8E47C9D42B1EE433002E213E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		8E47C9D62B1EE4AA002E213E /* AddNewCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCategoryView.swift; sourceTree = "<group>"; };
 		8E47C9D82B1EE8CA002E213E /* Comfortaa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Regular.ttf"; sourceTree = "<group>"; };
 		8E47C9DB2B1EEC12002E213E /* Comfortaa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comfortaa.swift; sourceTree = "<group>"; };
 		8E47C9DD2B1FC521002E213E /* Comfortaa-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Medium.ttf"; sourceTree = "<group>"; };
 		8E47C9DE2B1FC521002E213E /* Comfortaa-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-SemiBold.ttf"; sourceTree = "<group>"; };
 		8E47C9DF2B1FC522002E213E /* Comfortaa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Light.ttf"; sourceTree = "<group>"; };
 		8E47C9E12B1FC522002E213E /* Comfortaa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Bold.ttf"; sourceTree = "<group>"; };
+		8E47C9EA2B1FECE3002E213E /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		8E47C9EC2B203CC9002E213E /* AddNewCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCategoryView.swift; sourceTree = "<group>"; };
+		8E47C9EE2B205491002E213E /* AddNewCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCategoryViewController.swift; sourceTree = "<group>"; };
+		8E47C9F02B216D2F002E213E /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		8E47C9F22B217085002E213E /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		8E47C9F42B217167002E213E /* TransactionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailView.swift; sourceTree = "<group>"; };
+		8E47C9F62B227BDB002E213E /* TransactionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewController.swift; sourceTree = "<group>"; };
 		8E931F032B0C6AF0005EF0AA /* Expenset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expenset.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E931F062B0C6AF0005EF0AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E931F082B0C6AF0005EF0AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -183,8 +195,26 @@
 			isa = PBXGroup;
 			children = (
 				8E47C9D02B1EE31D002E213E /* TransactionView.swift */,
+				8E47C9EA2B1FECE3002E213E /* TransactionTableViewCell.swift */,
+				8E47C9EC2B203CC9002E213E /* AddNewCategoryView.swift */,
+				8E47C9F42B217167002E213E /* TransactionDetailView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		8E47C9F82B22B6CF002E213E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E47C9D42B1EE433002E213E /* ProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E47C9F92B22B6E6002E213E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		8E931EFA2B0C6AF0005EF0AA = {
@@ -253,6 +283,8 @@
 			children = (
 				8E47C9E92B1FEC79002E213E /* View */,
 				8E47C9A72B1DDE77002E213E /* TransactionViewController.swift */,
+				8E47C9EE2B205491002E213E /* AddNewCategoryViewController.swift */,
+				8E47C9F62B227BDB002E213E /* TransactionDetailViewController.swift */,
 			);
 			path = "Transaction Screen";
 			sourceTree = "<group>";
@@ -262,7 +294,6 @@
 			children = (
 				8E47C9A92B1DDE84002E213E /* CreateViewController.swift */,
 				8E47C9CC2B1EE134002E213E /* CreateView.swift */,
-				8E47C9D62B1EE4AA002E213E /* AddNewCategoryView.swift */,
 			);
 			path = "Create Screen";
 			sourceTree = "<group>";
@@ -279,8 +310,9 @@
 		8E931F2A2B1DA2E0005EF0AA /* Profile Screen */ = {
 			isa = PBXGroup;
 			children = (
+				8E47C9F92B22B6E6002E213E /* Extension */,
+				8E47C9F82B22B6CF002E213E /* View */,
 				8E47C9AD2B1DDF8C002E213E /* ProfileViewController.swift */,
-				8E47C9D42B1EE433002E213E /* ProfileView.swift */,
 			);
 			path = "Profile Screen";
 			sourceTree = "<group>";
@@ -316,6 +348,7 @@
 		8E931F2E2B1DA332005EF0AA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8E47C9F02B216D2F002E213E /* DateFormatter.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -324,6 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				8E47C9DB2B1EEC12002E213E /* Comfortaa.swift */,
+				8E47C9F22B217085002E213E /* Config.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -416,7 +450,6 @@
 			files = (
 				8E47C9CD2B1EE134002E213E /* CreateView.swift in Sources */,
 				8E47C9CB2B1EB00F002E213E /* BaseFirebaseManager.swift in Sources */,
-				8E47C9D72B1EE4AA002E213E /* AddNewCategoryView.swift in Sources */,
 				8E47C9AC2B1DDE8F002E213E /* ReportViewController.swift in Sources */,
 				8E47C9C02B1E96B7002E213E /* LoadingDelegate.swift in Sources */,
 				8E47C9A62B1DDE66002E213E /* HomeViewController.swift in Sources */,
@@ -427,7 +460,9 @@
 				8E47C9C22B1EA6F9002E213E /* SignupPhotoManager.swift in Sources */,
 				8E47C9AA2B1DDE84002E213E /* CreateViewController.swift in Sources */,
 				8E931F312B1DA3C9005EF0AA /* FirebaseModel.swift in Sources */,
+				8E47C9F52B217167002E213E /* TransactionDetailView.swift in Sources */,
 				8E47C9B92B1E92DC002E213E /* SignupFirebaseManager.swift in Sources */,
+				8E47C9F72B227BDB002E213E /* TransactionDetailViewController.swift in Sources */,
 				8E47C9B42B1E89C8002E213E /* LoginView.swift in Sources */,
 				8E47C9D52B1EE433002E213E /* ProfileView.swift in Sources */,
 				8E47C9DC2B1EEC12002E213E /* Comfortaa.swift in Sources */,
@@ -436,10 +471,15 @@
 				8E931F072B0C6AF0005EF0AA /* AppDelegate.swift in Sources */,
 				8E47C9D12B1EE31D002E213E /* TransactionView.swift in Sources */,
 				8E47C9D32B1EE423002E213E /* ReportView.swift in Sources */,
+				8E47C9F12B216D2F002E213E /* DateFormatter.swift in Sources */,
 				8E47C9B02B1E898F002E213E /* LoginViewController.swift in Sources */,
+				8E47C9ED2B203CC9002E213E /* AddNewCategoryView.swift in Sources */,
 				8E47C9BB2B1E9464002E213E /* SignupLoadingManager.swift in Sources */,
+				8E47C9EB2B1FECE3002E213E /* TransactionTableViewCell.swift in Sources */,
+				8E47C9EF2B205491002E213E /* AddNewCategoryViewController.swift in Sources */,
 				8E47C9B62B1E89D9002E213E /* SignupView.swift in Sources */,
 				8E931F092B0C6AF0005EF0AA /* SceneDelegate.swift in Sources */,
+				8E47C9F32B217085002E213E /* Config.swift in Sources */,
 				8E47C9CF2B1EE26F002E213E /* HomeView.swift in Sources */,
 				8E47C9C52B1EA99C002E213E /* LoginLoadingManager.swift in Sources */,
 			);
