@@ -29,6 +29,7 @@ class TransactionView: UIView {
         setupTimeRangeMenuButton()
         setupCategoryMenuButton()
         setupAddNewCategoryButton()
+        setupTableView()
     }
     
     func setupConstraint() {
@@ -48,7 +49,7 @@ class TransactionView: UIView {
     
     func setupTableView() {
         transactionTableView = UITableView()
-        transactionTableView.register(TransactionTableViewCell.self, forCellReuseIdentifier: Config.transactionCellID)
+        transactionTableView.register(TransactionTableViewCell.self, forCellReuseIdentifier: Config.transactionTableCellID)
         transactionTableView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(transactionTableView)
     }

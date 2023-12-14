@@ -8,8 +8,9 @@
 import UIKit
 
 class TransactionTableViewCell: UITableViewCell {
-
-    var wrapperCell: UIView!
+    
+    var containerView: UIView!
+    var wrapperCell: UITableViewCell!
     var categoryLabel: UILabel!
     var descriptionLabel: UILabel!
     var amountLabel: UILabel!
@@ -43,6 +44,11 @@ class TransactionTableViewCell: UITableViewCell {
             wrapperCell.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             wrapperCell.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             
+            containerView.topAnchor.constraint(equalTo: wrapperCell.topAnchor),
+            containerView.bottomAnchor.constraint(equalTo: wrapperCell.bottomAnchor),
+            containerView.leadingAnchor.constraint(equalTo: wrapperCell.leadingAnchor),
+            containerView.trailingAnchor.constraint(equalTo: wrapperCell.trailingAnchor),
+            
             categoryLabel.topAnchor.constraint(equalTo: wrapperCell.topAnchor, constant: 16),
             categoryLabel.leadingAnchor.constraint(equalTo: wrapperCell.leadingAnchor, constant: 16),
             
@@ -68,10 +74,10 @@ class TransactionTableViewCell: UITableViewCell {
     func setupDateLabel() {
         dateLabel = UILabel()
         dateLabel.font = UIFont(name: Comfortaa.Light, size: 16)
-        dateLabel.textColor = UIColor.tertiaryLabel
+        dateLabel.textColor = UIColor.label
         dateLabel.numberOfLines = 1
         dateLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(dateLabel)
+        wrapperCell.contentView.addSubview(dateLabel)
     }
     
     func setupAmountLabel() {
@@ -80,16 +86,16 @@ class TransactionTableViewCell: UITableViewCell {
         amountLabel.textColor = UIColor.label
         amountLabel.translatesAutoresizingMaskIntoConstraints = false
         amountLabel.numberOfLines = 1
-        self.addSubview(amountLabel)
+        wrapperCell.contentView.addSubview(amountLabel)
     }
     
     func setupDescriptionLabel() {
         descriptionLabel = UILabel()
         descriptionLabel.font = UIFont(name: Comfortaa.Regular, size: 16)
-        descriptionLabel.textColor = UIColor.secondaryLabel
+        descriptionLabel.textColor = UIColor.label
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         descriptionLabel.numberOfLines = 1
-        self.addSubview(descriptionLabel)
+        wrapperCell.contentView.addSubview(descriptionLabel)
     }
     
     func setupCategoryLabel() {
@@ -98,7 +104,7 @@ class TransactionTableViewCell: UITableViewCell {
         categoryLabel.textColor = UIColor.label
         descriptionLabel.numberOfLines = 1
         categoryLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(categoryLabel)
+        wrapperCell.contentView.addSubview(categoryLabel)
     }
     
     func setupWrapperCell() {
@@ -106,6 +112,16 @@ class TransactionTableViewCell: UITableViewCell {
         wrapperCell.backgroundColor = UIColor.secondarySystemBackground
         wrapperCell.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(wrapperCell)
+    }
+    
+    func setupContainerView() {
+        containerView = UIView()
+        containerView.backgroundColor = UIColor.secondarySystemBackground
+        containerView.layer.cornerRadius = 12 // Set your desired corner radius
+        containerView.clipsToBounds = true
+        containerView.translatesAutoresizingMaskIntoConstraints = false
+
+        wrapperCell.contentView.addSubview(containerView)
     }
 
 }

@@ -18,19 +18,29 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Home"
+       setupTitle()
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupTitle() {
+        let title = "Home"
+        let attributedString = NSMutableAttributedString(string: title)
+        
+        // Apply attributes to the attributed string
+        let attributes: [NSAttributedString.Key: Any] = [
+            .foregroundColor: UIColor.label, // Change text color
+            .font: UIFont(name: Comfortaa.Bold, size: 16)// Change font and size
+            // Add more attributes if needed
+        ]
+        attributedString.addAttributes(attributes, range: NSRange(location: 0, length: title.count))
+        
+        // Create a label with the attributed string
+        let titleLabel = UILabel()
+        titleLabel.attributedText = attributedString
+        titleLabel.sizeToFit() // Adjust the label size to fit the attributed text
+        
+        // Set the label as the title view of the navigation item
+        navigationItem.titleView = titleLabel
     }
-    */
 
 }

@@ -20,14 +20,31 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        self.title = "Sign up"
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        
-        self.view.backgroundColor = .white
-        
+        setupTitle()
+
         loginView.buttonNext.addTarget(self, action: #selector(clickButtonNext), for: .touchUpInside)
         loginView.buttonSignUp.addTarget(self, action: #selector(clickButtonSignUp), for: .touchUpInside)
+    }
+    
+    private func setupTitle() {
+        let title = "Log in"
+        let attributedString = NSMutableAttributedString(string: title)
+        
+        // Apply attributes to the attributed string
+        let attributes: [NSAttributedString.Key: Any] = [
+            .foregroundColor: UIColor.label, // Change text color
+            .font: UIFont(name: Comfortaa.Bold, size: 16)// Change font and size
+            // Add more attributes if needed
+        ]
+        attributedString.addAttributes(attributes, range: NSRange(location: 0, length: title.count))
+        
+        // Create a label with the attributed string
+        let titleLabel = UILabel()
+        titleLabel.attributedText = attributedString
+        titleLabel.sizeToFit() // Adjust the label size to fit the attributed text
+        
+        // Set the label as the title view of the navigation item
+        navigationItem.titleView = titleLabel
     }
     
     @objc func clickButtonNext() {

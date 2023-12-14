@@ -42,6 +42,14 @@
 		8E47C9F32B217085002E213E /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9F22B217085002E213E /* Config.swift */; };
 		8E47C9F52B217167002E213E /* TransactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9F42B217167002E213E /* TransactionDetailView.swift */; };
 		8E47C9F72B227BDB002E213E /* TransactionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9F62B227BDB002E213E /* TransactionDetailViewController.swift */; };
+		8E47C9FB2B281E69002E213E /* ProfileDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9FA2B281E69002E213E /* ProfileDetailView.swift */; };
+		8E47C9FD2B281E7D002E213E /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9FC2B281E7D002E213E /* EditProfileView.swift */; };
+		8E47CA002B29669B002E213E /* CreatePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9FF2B29669B002E213E /* CreatePickerManager.swift */; };
+		8E47CA022B2966BB002E213E /* CreatePhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47CA012B2966BB002E213E /* CreatePhotoManager.swift */; };
+		8E47CA042B29683C002E213E /* CreateLoadingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47CA032B29683C002E213E /* CreateLoadingManager.swift */; };
+		8E47CA062B296D43002E213E /* CreateFIrebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47CA052B296D43002E213E /* CreateFIrebaseManager.swift */; };
+		8E47CA082B2A8F55002E213E /* UnderlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47CA072B2A8F55002E213E /* UnderlineView.swift */; };
+		8E47CA0B2B2A9F59002E213E /* TransactionTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47CA0A2B2A9F59002E213E /* TransactionTableViewManager.swift */; };
 		8E931F072B0C6AF0005EF0AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E931F062B0C6AF0005EF0AA /* AppDelegate.swift */; };
 		8E931F092B0C6AF0005EF0AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E931F082B0C6AF0005EF0AA /* SceneDelegate.swift */; };
 		8E931F0B2B0C6AF0005EF0AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E931F0A2B0C6AF0005EF0AA /* ViewController.swift */; };
@@ -92,6 +100,14 @@
 		8E47C9F22B217085002E213E /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		8E47C9F42B217167002E213E /* TransactionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailView.swift; sourceTree = "<group>"; };
 		8E47C9F62B227BDB002E213E /* TransactionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewController.swift; sourceTree = "<group>"; };
+		8E47C9FA2B281E69002E213E /* ProfileDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailView.swift; sourceTree = "<group>"; };
+		8E47C9FC2B281E7D002E213E /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		8E47C9FF2B29669B002E213E /* CreatePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePickerManager.swift; sourceTree = "<group>"; };
+		8E47CA012B2966BB002E213E /* CreatePhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePhotoManager.swift; sourceTree = "<group>"; };
+		8E47CA032B29683C002E213E /* CreateLoadingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLoadingManager.swift; sourceTree = "<group>"; };
+		8E47CA052B296D43002E213E /* CreateFIrebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFIrebaseManager.swift; sourceTree = "<group>"; };
+		8E47CA072B2A8F55002E213E /* UnderlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineView.swift; sourceTree = "<group>"; };
+		8E47CA0A2B2A9F59002E213E /* TransactionTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewManager.swift; sourceTree = "<group>"; };
 		8E931F032B0C6AF0005EF0AA /* Expenset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expenset.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E931F062B0C6AF0005EF0AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E931F082B0C6AF0005EF0AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -198,6 +214,7 @@
 				8E47C9EA2B1FECE3002E213E /* TransactionTableViewCell.swift */,
 				8E47C9EC2B203CC9002E213E /* AddNewCategoryView.swift */,
 				8E47C9F42B217167002E213E /* TransactionDetailView.swift */,
+				8E47CA072B2A8F55002E213E /* UnderlineView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -206,6 +223,8 @@
 			isa = PBXGroup;
 			children = (
 				8E47C9D42B1EE433002E213E /* ProfileView.swift */,
+				8E47C9FA2B281E69002E213E /* ProfileDetailView.swift */,
+				8E47C9FC2B281E7D002E213E /* EditProfileView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,6 +232,25 @@
 		8E47C9F92B22B6E6002E213E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8E47C9FE2B296686002E213E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8E47C9FF2B29669B002E213E /* CreatePickerManager.swift */,
+				8E47CA012B2966BB002E213E /* CreatePhotoManager.swift */,
+				8E47CA032B29683C002E213E /* CreateLoadingManager.swift */,
+				8E47CA052B296D43002E213E /* CreateFIrebaseManager.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8E47CA092B2A9F46002E213E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8E47CA0A2B2A9F59002E213E /* TransactionTableViewManager.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -281,6 +319,7 @@
 		8E931F272B1DA1AA005EF0AA /* Transaction Screen */ = {
 			isa = PBXGroup;
 			children = (
+				8E47CA092B2A9F46002E213E /* Extension */,
 				8E47C9E92B1FEC79002E213E /* View */,
 				8E47C9A72B1DDE77002E213E /* TransactionViewController.swift */,
 				8E47C9EE2B205491002E213E /* AddNewCategoryViewController.swift */,
@@ -292,6 +331,7 @@
 		8E931F282B1DA2C3005EF0AA /* Create Screen */ = {
 			isa = PBXGroup;
 			children = (
+				8E47C9FE2B296686002E213E /* Extension */,
 				8E47C9A92B1DDE84002E213E /* CreateViewController.swift */,
 				8E47C9CC2B1EE134002E213E /* CreateView.swift */,
 			);
@@ -448,17 +488,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E47CA0B2B2A9F59002E213E /* TransactionTableViewManager.swift in Sources */,
+				8E47CA022B2966BB002E213E /* CreatePhotoManager.swift in Sources */,
 				8E47C9CD2B1EE134002E213E /* CreateView.swift in Sources */,
 				8E47C9CB2B1EB00F002E213E /* BaseFirebaseManager.swift in Sources */,
 				8E47C9AC2B1DDE8F002E213E /* ReportViewController.swift in Sources */,
 				8E47C9C02B1E96B7002E213E /* LoadingDelegate.swift in Sources */,
 				8E47C9A62B1DDE66002E213E /* HomeViewController.swift in Sources */,
+				8E47CA062B296D43002E213E /* CreateFIrebaseManager.swift in Sources */,
 				8E47C9B22B1E899D002E213E /* SignupViewController.swift in Sources */,
 				8E47C9BE2B1E96A5002E213E /* LoadingViewController.swift in Sources */,
 				8E47C9A82B1DDE77002E213E /* TransactionViewController.swift in Sources */,
 				8E47C9C72B1EA9F3002E213E /* LoginFirebaseManager.swift in Sources */,
 				8E47C9C22B1EA6F9002E213E /* SignupPhotoManager.swift in Sources */,
 				8E47C9AA2B1DDE84002E213E /* CreateViewController.swift in Sources */,
+				8E47CA002B29669B002E213E /* CreatePickerManager.swift in Sources */,
 				8E931F312B1DA3C9005EF0AA /* FirebaseModel.swift in Sources */,
 				8E47C9F52B217167002E213E /* TransactionDetailView.swift in Sources */,
 				8E47C9B92B1E92DC002E213E /* SignupFirebaseManager.swift in Sources */,
@@ -466,20 +510,24 @@
 				8E47C9B42B1E89C8002E213E /* LoginView.swift in Sources */,
 				8E47C9D52B1EE433002E213E /* ProfileView.swift in Sources */,
 				8E47C9DC2B1EEC12002E213E /* Comfortaa.swift in Sources */,
+				8E47C9FD2B281E7D002E213E /* EditProfileView.swift in Sources */,
 				8E931F0B2B0C6AF0005EF0AA /* ViewController.swift in Sources */,
 				8E47C9AE2B1DDF8C002E213E /* ProfileViewController.swift in Sources */,
 				8E931F072B0C6AF0005EF0AA /* AppDelegate.swift in Sources */,
 				8E47C9D12B1EE31D002E213E /* TransactionView.swift in Sources */,
+				8E47CA082B2A8F55002E213E /* UnderlineView.swift in Sources */,
 				8E47C9D32B1EE423002E213E /* ReportView.swift in Sources */,
 				8E47C9F12B216D2F002E213E /* DateFormatter.swift in Sources */,
 				8E47C9B02B1E898F002E213E /* LoginViewController.swift in Sources */,
 				8E47C9ED2B203CC9002E213E /* AddNewCategoryView.swift in Sources */,
+				8E47CA042B29683C002E213E /* CreateLoadingManager.swift in Sources */,
 				8E47C9BB2B1E9464002E213E /* SignupLoadingManager.swift in Sources */,
 				8E47C9EB2B1FECE3002E213E /* TransactionTableViewCell.swift in Sources */,
 				8E47C9EF2B205491002E213E /* AddNewCategoryViewController.swift in Sources */,
 				8E47C9B62B1E89D9002E213E /* SignupView.swift in Sources */,
 				8E931F092B0C6AF0005EF0AA /* SceneDelegate.swift in Sources */,
 				8E47C9F32B217085002E213E /* Config.swift in Sources */,
+				8E47C9FB2B281E69002E213E /* ProfileDetailView.swift in Sources */,
 				8E47C9CF2B1EE26F002E213E /* HomeView.swift in Sources */,
 				8E47C9C52B1EA99C002E213E /* LoginLoadingManager.swift in Sources */,
 			);

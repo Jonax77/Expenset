@@ -15,6 +15,9 @@ class TransactionViewController: UIViewController {
     var categoryMenuItems: [UIAction]!
     var categoryMenu: UIMenu!
     
+    
+    var transactionData: [Transaction] = [Transaction(amount: 15, category: Category(name: "Grocery", type: .expense), createdTime: Date())]
+    
     let transactionView = TransactionView()
     
     override func loadView() {
@@ -24,8 +27,7 @@ class TransactionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Transaction"
-        
+        setupTitle()
         setupMenu()
         
         self.transactionView.addNewCategoryButton.addTarget(self, action: #selector(addNewCategoryButtonTapped), for: .touchUpInside)
@@ -36,6 +38,27 @@ class TransactionViewController: UIViewController {
         vc.modalPresentationStyle = .pageSheet
         vc.sheetPresentationController?.detents = [.medium()]
         present(vc, animated: true)
+    }
+    
+    private func setupTitle() {
+        let title = "Transaction"
+        let attributedString = NSMutableAttributedString(string: title)
+        
+        // Apply attributes to the attributed string
+        let attributes: [NSAttributedString.Key: Any] = [
+            .foregroundColor: UIColor.label, // Change text color
+            .font: UIFont(name: Comfortaa.Bold, size: 16)// Change font and size
+            // Add more attributes if needed
+        ]
+        attributedString.addAttributes(attributes, range: NSRange(location: 0, length: title.count))
+        
+        // Create a label with the attributed string
+        let titleLabel = UILabel()
+        titleLabel.attributedText = attributedString
+        titleLabel.sizeToFit() // Adjust the label size to fit the attributed text
+        
+        // Set the label as the title view of the navigation item
+        navigationItem.titleView = titleLabel
     }
     
     func setupMenu() {

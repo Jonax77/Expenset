@@ -10,7 +10,7 @@ import UIKit
 
 class SignupView: UIView {
     
-    var labelTitle: UILabel!
+    var titleLabel: UILabel!
     var labelName: UILabel!
     var textFieldName: UITextField!
     var labelEmail: UILabel!
@@ -20,160 +20,223 @@ class SignupView: UIView {
     var labelRepeatPassword: UILabel!
     var textFieldRepeatPassword: UITextField!
     var buttonNext: UIButton!
+    var takePhotoLabel: UILabel!
     var buttonTakePhoto: UIButton!
+    
+    var wrapperView: UIScrollView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .white
         
+        setupView()
+        initConstraints()
+    }
+    
+    func setupView(){
+        setupWrapperView()
+        setupTitleLabel()
         setupLabelName()
         setupTextFieldName()
         setupLabelEmail()
         setupTextFieldEmail()
-        setupLabelPassword()
+        setupPasswordLabel()
         setupTextFieldPassword()
         setupButtonNext()
         setupLabelRepeatPassword()
         setupTextFieldRepeatPassword()
-        
+        setupTakePhotoLabel()
         setupbuttonTakePhoto()
-        
-        initConstraints()
+    }
+    
+    func setupWrapperView() {
+        wrapperView = UIScrollView()
+        wrapperView.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(wrapperView)
+    }
+    
+    func setupTakePhotoLabel() {
+        takePhotoLabel = UILabel()
+        takePhotoLabel.text = "Add a profile photo (Optional)"
+        takePhotoLabel.textColor = UIColor.label
+        takePhotoLabel.font =  UIFont(name: Comfortaa.Bold, size: 18)
+        takePhotoLabel.translatesAutoresizingMaskIntoConstraints = false
+        wrapperView.addSubview(takePhotoLabel)
     }
     
     func setupbuttonTakePhoto(){
-        buttonTakePhoto = UIButton(type: .system)
-        buttonTakePhoto.setTitle("", for: .normal)
-        buttonTakePhoto.setImage(UIImage(systemName: "photo.on.rectangle.angled")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        buttonTakePhoto = UIButton()
+        buttonTakePhoto.setImage(UIImage(systemName: "photo.on.rectangle.angled")?.withTintColor(UIColor.label, renderingMode: .alwaysOriginal), for: .normal)
         buttonTakePhoto.contentHorizontalAlignment = .fill
         buttonTakePhoto.contentVerticalAlignment = .fill
         buttonTakePhoto.imageView?.contentMode = .scaleAspectFit
         buttonTakePhoto.showsMenuAsPrimaryAction = true
         buttonTakePhoto.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(buttonTakePhoto)
+        wrapperView.addSubview(buttonTakePhoto)
         }
+    
+    func setupTitleLabel() {
+        titleLabel = UILabel()
+        titleLabel.text = "Sign up"
+        titleLabel.textColor = UIColor.label
+        titleLabel.font =  UIFont(name: Comfortaa.Bold, size: 32)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        wrapperView.addSubview(titleLabel)
+    }
     
     func setupLabelName() {
         labelName = UILabel()
         labelName.text = "Name"
-        labelName.font = UIFont.italicSystemFont(ofSize: 18)
+        labelName.textColor = UIColor.label
+        labelName.font =  UIFont(name: Comfortaa.Bold, size: 18)
         labelName.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(labelName)
+        wrapperView.addSubview(labelName)
     }
-
+    
     func setupLabelEmail() {
         labelEmail = UILabel()
         labelEmail.text = "Email"
-        labelEmail.font = UIFont.italicSystemFont(ofSize: 18)
+        labelEmail.textColor = UIColor.label
+        labelEmail.font =  UIFont(name: Comfortaa.Bold, size: 18)
         labelEmail.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(labelEmail)
+        wrapperView.addSubview(labelEmail)
     }
-
-    func setupLabelPassword() {
+    
+    func setupPasswordLabel() {
         labelPassword = UILabel()
         labelPassword.text = "Password"
-        labelPassword.font = UIFont.italicSystemFont(ofSize: 18)
+        labelPassword.textColor = UIColor.label
+        labelPassword.font =  UIFont(name: Comfortaa.Bold, size: 18)
         labelPassword.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(labelPassword)
+        wrapperView.addSubview(labelPassword)
     }
     
     func setupLabelRepeatPassword() {
         labelRepeatPassword = UILabel()
         labelRepeatPassword.text = "Repeat Password"
-        labelRepeatPassword.font = UIFont.italicSystemFont(ofSize: 18)
+        labelRepeatPassword.textColor = UIColor.label
+        labelRepeatPassword.font =  UIFont(name: Comfortaa.Bold, size: 18)
         labelRepeatPassword.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(labelRepeatPassword)
+        wrapperView.addSubview(labelRepeatPassword)
     }
     
     func setupTextFieldName(){
         textFieldName = UITextField()
-        textFieldName.placeholder = "Name"
-        textFieldName.borderStyle = .roundedRect
+        textFieldName.textColor = UIColor.label
+        textFieldName.font = UIFont(name: Comfortaa.Regular, size: 18)
+        textFieldName.layer.cornerRadius = 8.0
+        textFieldName.layer.borderWidth = 1.0
+        textFieldName.layer.borderColor = UIColor.label.cgColor
         textFieldName.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(textFieldName)
+        wrapperView.addSubview(textFieldName)
     }
     
     func setupTextFieldEmail(){
         textFieldEmail = UITextField()
-        textFieldEmail.placeholder = "Email"
-        textFieldEmail.borderStyle = .roundedRect
+        textFieldEmail.textColor = UIColor.label
+        textFieldEmail.font = UIFont(name: Comfortaa.Regular, size: 18)
+        textFieldEmail.layer.cornerRadius = 8.0
+        textFieldEmail.layer.borderWidth = 1.0
+        textFieldEmail.layer.borderColor = UIColor.label.cgColor
         textFieldEmail.keyboardType = .emailAddress
         textFieldEmail.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(textFieldEmail)
+        wrapperView.addSubview(textFieldEmail)
     }
     
     func setupTextFieldPassword(){
         textFieldPassword = UITextField()
-        textFieldPassword.placeholder = "Password"
+        textFieldPassword.textColor = UIColor.label
+        textFieldPassword.font = UIFont(name: Comfortaa.Regular, size: 18)
+        textFieldPassword.layer.cornerRadius = 8.0
+        textFieldPassword.layer.borderWidth = 1.0
+        textFieldPassword.layer.borderColor = UIColor.label.cgColor
         textFieldPassword.isSecureTextEntry = true
-        textFieldPassword.borderStyle = .roundedRect
         textFieldPassword.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(textFieldPassword)
+        wrapperView.addSubview(textFieldPassword)
     }
     
     func setupTextFieldRepeatPassword() {
         textFieldRepeatPassword = UITextField()
-        textFieldRepeatPassword.placeholder = "Repeat password"
+        textFieldRepeatPassword.textColor = UIColor.label
+        textFieldRepeatPassword.font = UIFont(name: Comfortaa.Regular, size: 18)
+        textFieldRepeatPassword.layer.cornerRadius = 8.0
+        textFieldRepeatPassword.layer.borderWidth = 1.0
+        textFieldRepeatPassword.layer.borderColor = UIColor.label.cgColor
         textFieldRepeatPassword.isSecureTextEntry = true
-        textFieldRepeatPassword.borderStyle = .roundedRect
         textFieldRepeatPassword.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(textFieldRepeatPassword)
+        wrapperView.addSubview(textFieldRepeatPassword)
     }
     
     func setupButtonNext(){
-        buttonNext = UIButton(type: .system)
+        buttonNext = UIButton()
         buttonNext.setTitle("Next", for: .normal)
-        buttonNext.backgroundColor = UIColor.systemBlue // A blueish color
-        buttonNext.setTitleColor(.white, for: .normal)
+        buttonNext.backgroundColor = UIColor.label
+        buttonNext.setTitleColor(UIColor.systemBackground, for: .normal)
         buttonNext.layer.cornerRadius = 10 // Adjust this value to get the desired roundness
-        buttonNext.layer.shadowColor = UIColor.black.cgColor
+        buttonNext.layer.shadowColor = UIColor.label.cgColor
         buttonNext.layer.shadowOffset = CGSize(width: 0, height: 2)
         buttonNext.layer.shadowRadius = 4
         buttonNext.layer.shadowOpacity = 0.25
-        buttonNext.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        buttonNext.titleLabel?.font = UIFont(name: Comfortaa.Bold, size: 18)
         buttonNext.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(buttonNext)
+        wrapperView.addSubview(buttonNext)
     }
     
     func initConstraints(){
         NSLayoutConstraint.activate([
-            buttonTakePhoto.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 16),
-            buttonTakePhoto.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),
+            wrapperView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            wrapperView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
+            wrapperView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
+            wrapperView.heightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.heightAnchor),
+            
+            titleLabel.topAnchor.constraint(equalTo: wrapperView.topAnchor, constant: 32),
+            titleLabel.centerXAnchor.constraint(equalTo: wrapperView.centerXAnchor),
+            
+            labelName.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 32),
+            labelName.leadingAnchor.constraint(equalTo: wrapperView.leadingAnchor, constant: 32),
+            
+            textFieldName.topAnchor.constraint(equalTo: labelName.bottomAnchor, constant: 16),
+            textFieldName.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 32),
+            textFieldName.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -32),
+            textFieldName.heightAnchor.constraint(equalToConstant: 40),
+            
+            labelEmail.topAnchor.constraint(equalTo: textFieldName.bottomAnchor, constant: 32),
+            labelEmail.leadingAnchor.constraint(equalTo: wrapperView.leadingAnchor, constant: 32),
+            
+            textFieldEmail.topAnchor.constraint(equalTo: labelEmail.bottomAnchor, constant: 16),
+            textFieldEmail.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 32),
+            textFieldEmail.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -32),
+            textFieldEmail.heightAnchor.constraint(equalToConstant: 40),
+            
+            labelPassword.topAnchor.constraint(equalTo: textFieldEmail.bottomAnchor, constant: 32),
+            labelPassword.leadingAnchor.constraint(equalTo: wrapperView.leadingAnchor, constant: 32),
+            
+            textFieldPassword.topAnchor.constraint(equalTo: labelPassword.bottomAnchor, constant: 16),
+            textFieldPassword.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 32),
+            textFieldPassword.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -32),
+            textFieldPassword.heightAnchor.constraint(equalToConstant: 40),
+            
+            
+            labelRepeatPassword.topAnchor.constraint(equalTo: textFieldPassword.bottomAnchor, constant: 32),
+            labelRepeatPassword.leadingAnchor.constraint(equalTo: wrapperView.leadingAnchor, constant: 32),
+            
+            textFieldRepeatPassword.topAnchor.constraint(equalTo: labelRepeatPassword.bottomAnchor, constant: 16),
+            textFieldRepeatPassword.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 32),
+            textFieldRepeatPassword.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -32),
+            textFieldRepeatPassword.heightAnchor.constraint(equalToConstant: 40),
+            
+            takePhotoLabel.topAnchor.constraint(equalTo: textFieldRepeatPassword.bottomAnchor, constant: 32),
+            takePhotoLabel.leadingAnchor.constraint(equalTo: wrapperView.leadingAnchor, constant: 32),
+            
+            buttonTakePhoto.topAnchor.constraint(equalTo: takePhotoLabel.bottomAnchor, constant: 16),
+            buttonTakePhoto.leadingAnchor.constraint(equalTo: wrapperView.leadingAnchor, constant: 32),
             buttonTakePhoto.widthAnchor.constraint(equalToConstant: 100),
             buttonTakePhoto.heightAnchor.constraint(equalToConstant: 100),
             
-            labelName.topAnchor.constraint(equalTo: buttonTakePhoto.bottomAnchor, constant: 24),
-            labelName.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            
-            textFieldName.topAnchor.constraint(equalTo: labelName.bottomAnchor, constant: 8),
-            textFieldName.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            textFieldName.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            
-            labelEmail.topAnchor.constraint(equalTo: textFieldName.bottomAnchor, constant: 20),
-            labelEmail.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            
-            textFieldEmail.topAnchor.constraint(equalTo: labelEmail.bottomAnchor, constant: 8),
-            textFieldEmail.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            textFieldEmail.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            
-            labelPassword.topAnchor.constraint(equalTo: textFieldEmail.bottomAnchor, constant: 20),
-            labelPassword.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            
-            textFieldPassword.topAnchor.constraint(equalTo: labelPassword.bottomAnchor, constant: 8),
-            textFieldPassword.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            textFieldPassword.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            
-            labelRepeatPassword.topAnchor.constraint(equalTo: textFieldPassword.bottomAnchor, constant: 20),
-            labelRepeatPassword.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            
-            textFieldRepeatPassword.topAnchor.constraint(equalTo: labelRepeatPassword.bottomAnchor, constant: 8),
-            textFieldRepeatPassword.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            textFieldRepeatPassword.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            
-            buttonNext.topAnchor.constraint(equalTo: textFieldRepeatPassword.bottomAnchor, constant: 40),
-            buttonNext.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            buttonNext.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            buttonNext.heightAnchor.constraint(equalToConstant: 48)
+            buttonNext.topAnchor.constraint(equalTo: buttonTakePhoto.bottomAnchor, constant: 32),
+            buttonNext.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 32),
+            buttonNext.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -32),
+            buttonNext.heightAnchor.constraint(equalToConstant: 48),
+            buttonNext.bottomAnchor.constraint(equalTo: wrapperView.bottomAnchor, constant: -32)
             
         ])
     }

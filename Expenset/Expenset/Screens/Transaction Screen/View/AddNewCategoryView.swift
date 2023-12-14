@@ -16,6 +16,9 @@ class AddNewCategoryView: UIView {
     var expenseButton: UIButton!
     var typeLabel: UILabel!
     var nextButton: UIButton!
+    
+    var underlineViewIncome: UnderlineView!
+    var underlineViewExpense: UnderlineView!
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,7 +38,8 @@ class AddNewCategoryView: UIView {
         setupIncomeButton()
         setupExpenseButton()
         setupNextButton()
-        
+        setupUnderlineViewIncome()
+        setupUnderlineViewExpense()
     }
     
     func setupConstraint() {
@@ -44,24 +48,37 @@ class AddNewCategoryView: UIView {
             titleLabel.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),
             
             nameLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 48),
-            nameLabel.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 24),
+            nameLabel.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 32),
             nameLabel.widthAnchor.constraint(equalToConstant: 80),
             
             nameField.centerYAnchor.constraint(equalTo: nameLabel.centerYAnchor),
             nameField.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor, constant: 0),
-            nameField.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -24),
+            nameField.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -32),
             nameField.heightAnchor.constraint(equalToConstant: 40),
             
             typeLabel.topAnchor.constraint(equalTo: self.nameLabel.bottomAnchor, constant: 32),
             typeLabel.leadingAnchor.constraint(equalTo: self.nameLabel.leadingAnchor),
             
-            incomeButton.leadingAnchor.constraint(equalTo: typeLabel.trailingAnchor, constant: 24),
+            incomeButton.leadingAnchor.constraint(equalTo: typeLabel.trailingAnchor, constant: 32),
             incomeButton.centerYAnchor.constraint(equalTo: typeLabel.centerYAnchor),
+            
+            underlineViewIncome.leadingAnchor.constraint(equalTo: incomeButton.leadingAnchor),
+            underlineViewIncome.trailingAnchor.constraint(equalTo: incomeButton.trailingAnchor),
+            underlineViewIncome.bottomAnchor.constraint(equalTo: incomeButton.bottomAnchor),
+            underlineViewIncome.heightAnchor.constraint(equalToConstant: 2),
+            
+            expenseButton.leadingAnchor.constraint(equalTo: incomeButton.trailingAnchor, constant: 32),
+            expenseButton.centerYAnchor.constraint(equalTo: incomeButton.centerYAnchor),
+            
+            underlineViewExpense.leadingAnchor.constraint(equalTo: expenseButton.leadingAnchor),
+            underlineViewExpense.trailingAnchor.constraint(equalTo: expenseButton.trailingAnchor),
+            underlineViewExpense.bottomAnchor.constraint(equalTo: expenseButton.bottomAnchor),
+            underlineViewExpense.heightAnchor.constraint(equalToConstant: 2),
             
             nextButton.topAnchor.constraint(equalTo: incomeButton.bottomAnchor, constant: 32),
             nextButton.heightAnchor.constraint(equalToConstant: 48),
-            nextButton.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 24),
-            nextButton.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -24),
+            nextButton.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 32),
+            nextButton.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -32),
             
         ])
     }
@@ -113,6 +130,18 @@ class AddNewCategoryView: UIView {
         self.addSubview(nameLabel)
     }
     
+    func setupUnderlineViewIncome() {
+        underlineViewIncome = UnderlineView()
+        underlineViewIncome.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(underlineViewIncome)
+    }
+    
+    func setupUnderlineViewExpense() {
+        underlineViewExpense = UnderlineView()
+        underlineViewExpense.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(underlineViewExpense)
+    }
+    
     func setupIncomeButton() {
         incomeButton = UIButton()
         let attributes: [NSAttributedString.Key: Any] = [
@@ -122,21 +151,28 @@ class AddNewCategoryView: UIView {
         let attributedString = NSAttributedString(string: "Income", attributes: attributes)
         incomeButton.setAttributedTitle(attributedString, for: .normal)
         incomeButton.translatesAutoresizingMaskIntoConstraints = false
-        incomeButton.layer.borderWidth = 1.0
-        incomeButton.layer.cornerRadius = 8
-        incomeButton.layer.backgroundColor = UIColor.label.cgColor
         self.addSubview(incomeButton)
     }
     
     func setupExpenseButton() {
-        
+        expenseButton = UIButton()
+        let attributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont(name: Comfortaa.Bold, size: 16) as Any,
+            .foregroundColor: UIColor.label
+        ]
+        let attributedString = NSAttributedString(string: "Expense", attributes: attributes)
+        expenseButton.setAttributedTitle(attributedString, for: .normal)
+        expenseButton.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(expenseButton)
     }
     
     func setupNameField() {
         nameField = UITextField()
-        nameField.font = UIFont(name: Comfortaa.Regular, size: 16)
         nameField.textColor = UIColor.label
-        nameField.borderStyle = .roundedRect
+        nameField.font = UIFont(name: Comfortaa.Regular, size: 18)
+        nameField.layer.cornerRadius = 8.0
+        nameField.layer.borderWidth = 1.0
+        nameField.layer.borderColor = UIColor.label.cgColor
         nameField.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(nameField)
     }

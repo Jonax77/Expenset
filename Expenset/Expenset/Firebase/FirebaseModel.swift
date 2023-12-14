@@ -59,6 +59,5 @@ struct Transaction {
     var category: Category
     var description: String?
     var createdTime: Date
-    var location: String? // city name
     var image: String? // image link
 }
