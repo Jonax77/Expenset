@@ -62,43 +62,21 @@ class LoginView: UIView {
         self.addSubview(labelPassword)
     }
 
-
-    
     func setupTextFieldEmail(){
-        textFieldEmail = UITextField()
-        textFieldEmail.textColor = UIColor.label
-        textFieldEmail.font = UIFont(name: Comfortaa.Regular, size: 18)
-        textFieldEmail.layer.cornerRadius = 8.0
-        textFieldEmail.layer.borderWidth = 1.0
-        textFieldEmail.layer.borderColor = UIColor.label.cgColor
-        textFieldEmail.keyboardType = .emailAddress
+        textFieldEmail = InputField()
         textFieldEmail.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(textFieldEmail)
     }
     
     func setupTextFieldPassword(){
-        textFieldPassword = UITextField()
-        textFieldPassword.textColor = UIColor.label
-        textFieldPassword.font = UIFont(name: Comfortaa.Regular, size: 18)
+        textFieldPassword = InputField()
         textFieldPassword.isSecureTextEntry = true
-        textFieldPassword.layer.cornerRadius = 8.0
-        textFieldPassword.layer.borderWidth = 1.0
-        textFieldPassword.layer.borderColor = UIColor.label.cgColor
         textFieldPassword.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(textFieldPassword)
     }
     
     func setupButtonNext(){
-        buttonNext = UIButton()
-        buttonNext.setTitle("Next", for: .normal)
-        buttonNext.backgroundColor = UIColor.label
-        buttonNext.setTitleColor(UIColor.systemBackground, for: .normal)
-        buttonNext.layer.cornerRadius = 10 // Adjust this value to get the desired roundness
-        buttonNext.layer.shadowColor = UIColor.label.cgColor
-        buttonNext.layer.shadowOffset = CGSize(width: 0, height: 2)
-        buttonNext.layer.shadowRadius = 4
-        buttonNext.layer.shadowOpacity = 0.25
-        buttonNext.titleLabel?.font = UIFont(name: Comfortaa.Bold, size: 18)
+        buttonNext = SubmitButton()
         buttonNext.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(buttonNext)
     }

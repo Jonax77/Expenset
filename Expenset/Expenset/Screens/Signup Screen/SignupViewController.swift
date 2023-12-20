@@ -121,3 +121,7 @@ class SignupViewController: UIViewController {
         self.present(alert, animated: true)
     }
 }
+
+#Preview {
+    SignupViewController()
+}

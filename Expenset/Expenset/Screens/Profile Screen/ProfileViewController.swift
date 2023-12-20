@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseStorage
 
 class ProfileViewController: UIViewController {
     
     let profileView = ProfileView()
+    let childProgressView = LoadingViewController()
     
     override func loadView() {
         view = profileView
@@ -20,7 +23,12 @@ class ProfileViewController: UIViewController {
         
         setupTitle()
 
-        // Do any additional setup after loading the view.
+        profileView.profileButton.addTarget(self, action: #selector(onProfileButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc private func onProfileButtonTapped() {
+        let vc = ProfileDetailViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     private func setupTitle() {

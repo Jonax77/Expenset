@@ -19,7 +19,7 @@ extension LoginViewController {
                 self.navigationController?.popToRootViewController(animated: true)
             }else{
                 self.hideActivityIndicator()
-                self.showAlert(msg: error.debugDescription)
+//                self.showAlert(msg: error.debugDescription)
             }
         })
     }

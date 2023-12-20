@@ -61,3 +61,9 @@ struct Transaction {
     var createdTime: Date
     var image: String? // image link
 }
+
+struct totalByCategory: Identifiable {
+    let id = UUID()
+    var name: String
+    var value: Double
+}

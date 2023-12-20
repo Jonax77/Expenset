@@ -224,3 +224,7 @@ class CreateView: UIView {
     }
 
 }
+
+#Preview {
+    CreateView()
+}

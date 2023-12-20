@@ -1,31 +1,29 @@
 //
-//  HomeViewController.swift
+//  ProfileDetailViewController.swift
 //  Expenset
 //
-//  Created by Zhiyun Lin on 12/4/23.
+//  Created by Zhiyun Lin on 12/16/23.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class ProfileDetailViewController: UIViewController {
     
-    let homeView = HomeView()
-    var transactionData: [Transaction] = [.init(amount: 5000, category: .init(name: "Grocery", type: .expense), createdTime: Date()), .init(amount: 5000, category: .init(name: "Grocery", type: .expense), createdTime: Date())]
+    let detailView = ProfileDetailView()
     
     override func loadView() {
-        view = homeView
+        view = detailView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       setupTitle()
-        self.homeView.transactionTable.dataSource = self
-        self.homeView.transactionTable.delegate = self
+        setupTitle()
+        setupBarItem()
     }
     
     private func setupTitle() {
-        let title = "Home"
+        let title = "Profile Detail"
         let attributedString = NSMutableAttributedString(string: title)
         
         // Apply attributes to the attributed string
@@ -44,6 +42,20 @@ class HomeViewController: UIViewController {
         // Set the label as the title view of the navigation item
         navigationItem.titleView = titleLabel
     }
-
+    
+    private func setupBarItem() {
+        let barIcon = UIBarButtonItem(
+            image: UIImage(systemName: "square.and.pencil")?.withTintColor(UIColor.label, renderingMode: .alwaysOriginal),
+            style: .plain,
+            target: self,
+            action: #selector(onEditButtonTapped)
+        )
+        navigationItem.rightBarButtonItems = [barIcon]
+    }
+    
+    @objc private func onEditButtonTapped() {
+        let vc = EditProfileViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+   
 }
-

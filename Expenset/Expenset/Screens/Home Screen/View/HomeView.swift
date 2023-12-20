@@ -24,8 +24,8 @@ class HomeView: UIView {
     var expenseLabel: UILabel!
     var expenseAmountLabel: UILabel!
     
-    var tablePanel: UIScrollView!
-    var optionStack: UIStackView!
+    var timeRangeControl: UISegmentedControl!
+    var transactionTable: UITableView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -47,6 +47,10 @@ class HomeView: UIView {
         setupIncomeIcon()
         setupIncomeLabel()
         setupIncomeAmountLabel()
+        
+        setupTimeRangeControl()
+        setupTransactionTable()
+        
     }
     
     func setupConstraint() {
@@ -78,22 +82,40 @@ class HomeView: UIView {
             incomeAmountLabel.topAnchor.constraint(equalTo: incomeLabel.bottomAnchor, constant: 8),
             incomeAmountLabel.leadingAnchor.constraint(equalTo: incomeLabel.leadingAnchor),
             
+            timeRangeControl.topAnchor.constraint(equalTo: incomeBg.bottomAnchor, constant: 32),
+            timeRangeControl.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            timeRangeControl.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            timeRangeControl.heightAnchor.constraint(equalToConstant: 32),
+            
+            transactionTable.topAnchor.constraint(equalTo: timeRangeControl.bottomAnchor, constant: 16),
+            transactionTable.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+            transactionTable.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            transactionTable.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            
             
         ])
     }
     
-    func setupTablePanel() {
-        tablePanel = UIScrollView()
-        tablePanel.showsHorizontalScrollIndicator = false
-        tablePanel.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(tablePanel)
+    func setupTransactionTable() {
+        transactionTable = UITableView()
+        transactionTable.register(SimpleTransactionTableViewCell.self, forCellReuseIdentifier: Config.simpleTransactionTableCellID)
+        transactionTable.separatorStyle = .none
+        transactionTable.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(transactionTable)
     }
     
-    func setupOptionStack() {
-        optionStack = UIStackView()
-        optionStack.axis = .horizontal
-        optionStack.translatesAutoresizingMaskIntoConstraints = false
-        tablePanel.addSubview(optionStack)
+    func setupTimeRangeControl() {
+        let action1 = UIAction(title: "Option 1", handler: { _ in print("Option 1 selected") })
+        let action2 = UIAction(title: "Option 2", handler: { _ in print("Option 2 selected") })
+        let action3 = UIAction(title: "Option 3", handler: { _ in print("Option 2 selected") })
+        let action4 = UIAction(title: "Option 4", handler: { _ in print("Option 2 selected") })
+        timeRangeControl = UISegmentedControl(frame: .zero, actions: [action1, action2, action3, action4])
+        timeRangeControl.setTitleTextAttributes([.font: UIFont(name: Comfortaa.Bold, size: 12) as Any, .foregroundColor: UIColor.label], for: .normal)
+        timeRangeControl.setTitleTextAttributes([.font: UIFont(name: Comfortaa.Bold, size: 12) as Any, .foregroundColor: UIColor.systemBackground], for: .selected)
+        timeRangeControl.selectedSegmentTintColor = UIColor.label
+        timeRangeControl.selectedSegmentIndex = 0
+        timeRangeControl.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(timeRangeControl)
     }
     
     func setupIncomeAmountLabel() {
@@ -155,4 +177,8 @@ class HomeView: UIView {
         self.addSubview(balanceLabel)
     }
 
+}
+
+#Preview {
+    HomeViewController()
 }

@@ -9,4 +9,5 @@ import Foundation
 
 class Config {
     static let transactionTableCellID = "transactionTableCellID"
+    static let simpleTransactionTableCellID = "simpleTransactionTableCellID"
 }

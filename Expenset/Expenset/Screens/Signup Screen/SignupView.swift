@@ -120,64 +120,29 @@ class SignupView: UIView {
     }
     
     func setupTextFieldName(){
-        textFieldName = UITextField()
-        textFieldName.textColor = UIColor.label
-        textFieldName.font = UIFont(name: Comfortaa.Regular, size: 18)
-        textFieldName.layer.cornerRadius = 8.0
-        textFieldName.layer.borderWidth = 1.0
-        textFieldName.layer.borderColor = UIColor.label.cgColor
-        textFieldName.translatesAutoresizingMaskIntoConstraints = false
+        textFieldName = InputField()
         wrapperView.addSubview(textFieldName)
     }
     
     func setupTextFieldEmail(){
-        textFieldEmail = UITextField()
-        textFieldEmail.textColor = UIColor.label
-        textFieldEmail.font = UIFont(name: Comfortaa.Regular, size: 18)
-        textFieldEmail.layer.cornerRadius = 8.0
-        textFieldEmail.layer.borderWidth = 1.0
-        textFieldEmail.layer.borderColor = UIColor.label.cgColor
-        textFieldEmail.keyboardType = .emailAddress
-        textFieldEmail.translatesAutoresizingMaskIntoConstraints = false
+        textFieldEmail = InputField()
         wrapperView.addSubview(textFieldEmail)
     }
     
     func setupTextFieldPassword(){
-        textFieldPassword = UITextField()
-        textFieldPassword.textColor = UIColor.label
-        textFieldPassword.font = UIFont(name: Comfortaa.Regular, size: 18)
-        textFieldPassword.layer.cornerRadius = 8.0
-        textFieldPassword.layer.borderWidth = 1.0
-        textFieldPassword.layer.borderColor = UIColor.label.cgColor
+        textFieldPassword = InputField()
         textFieldPassword.isSecureTextEntry = true
-        textFieldPassword.translatesAutoresizingMaskIntoConstraints = false
         wrapperView.addSubview(textFieldPassword)
     }
     
     func setupTextFieldRepeatPassword() {
-        textFieldRepeatPassword = UITextField()
-        textFieldRepeatPassword.textColor = UIColor.label
-        textFieldRepeatPassword.font = UIFont(name: Comfortaa.Regular, size: 18)
-        textFieldRepeatPassword.layer.cornerRadius = 8.0
-        textFieldRepeatPassword.layer.borderWidth = 1.0
-        textFieldRepeatPassword.layer.borderColor = UIColor.label.cgColor
+        textFieldRepeatPassword = InputField()
         textFieldRepeatPassword.isSecureTextEntry = true
-        textFieldRepeatPassword.translatesAutoresizingMaskIntoConstraints = false
         wrapperView.addSubview(textFieldRepeatPassword)
     }
     
     func setupButtonNext(){
-        buttonNext = UIButton()
-        buttonNext.setTitle("Next", for: .normal)
-        buttonNext.backgroundColor = UIColor.label
-        buttonNext.setTitleColor(UIColor.systemBackground, for: .normal)
-        buttonNext.layer.cornerRadius = 10 // Adjust this value to get the desired roundness
-        buttonNext.layer.shadowColor = UIColor.label.cgColor
-        buttonNext.layer.shadowOffset = CGSize(width: 0, height: 2)
-        buttonNext.layer.shadowRadius = 4
-        buttonNext.layer.shadowOpacity = 0.25
-        buttonNext.titleLabel?.font = UIFont(name: Comfortaa.Bold, size: 18)
-        buttonNext.translatesAutoresizingMaskIntoConstraints = false
+        buttonNext = SubmitButton()
         wrapperView.addSubview(buttonNext)
     }
     

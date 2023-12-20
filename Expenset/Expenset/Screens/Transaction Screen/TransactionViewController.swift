@@ -16,7 +16,7 @@ class TransactionViewController: UIViewController {
     var categoryMenu: UIMenu!
     
     
-    var transactionData: [Transaction] = [Transaction(amount: 15, category: Category(name: "Grocery", type: .expense), createdTime: Date())]
+    var transactionData: [Transaction] = [Transaction(amount: 15, category: Category(name: "Grodfsdfsdfsfscery", type: .expense), description: "aadfkjsljfs,dm,.fm,.cxmgksdgjeiurout", createdTime: Date()), Transaction(amount: 15, category: Category(name: "Grodfsdfsdfsfscery", type: .expense), description: "aadfkjsljfs,dm,.fm,.cxmgksdgjeiurout", createdTime: Date())]
     
     let transactionView = TransactionView()
     
@@ -31,6 +31,11 @@ class TransactionViewController: UIViewController {
         setupMenu()
         
         self.transactionView.addNewCategoryButton.addTarget(self, action: #selector(addNewCategoryButtonTapped), for: .touchUpInside)
+        
+        self.transactionView.transactionTableView.dataSource = self
+        self.transactionView.transactionTableView.delegate = self
+        self.transactionView.transactionTableView.reloadData()
+
     }
     
     @objc private func addNewCategoryButtonTapped() {

@@ -17,7 +17,7 @@ class ProfileView: UIView {
     var aboutButton: UIButton!
     var contactButton: UIButton!
     var dividerLine: UIView!
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -48,6 +48,8 @@ class ProfileView: UIView {
 
             nameLabel.centerYAnchor.constraint(equalTo: profileImage.centerYAnchor),
             nameLabel.leadingAnchor.constraint(equalTo: profileImage.trailingAnchor, constant: 16),
+            nameLabel.trailingAnchor.constraint(lessThanOrEqualTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -32),
+            
             
             dividerLine.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 32),
             dividerLine.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -32),
@@ -103,11 +105,11 @@ class ProfileView: UIView {
         aboutButton = UIButton(type: .system)
         aboutButton.translatesAutoresizingMaskIntoConstraints = false
         
-        let iconConfiguration = UIImage.SymbolConfiguration(pointSize: 16, weight: .bold)
+        let iconConfiguration = UIImage.SymbolConfiguration(pointSize: 20, weight: .bold)
         let icon = UIImage(systemName: "questionmark.bubble.fill", withConfiguration: iconConfiguration)?.withTintColor(UIColor.label, renderingMode: .alwaysOriginal)
         aboutButton.setImage(icon, for: .normal)
-        aboutButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -8, bottom: 0, right: 8)
-        aboutButton.titleLabel?.font = UIFont(name: Comfortaa.Bold, size: 16)
+        aboutButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -8, bottom: 0, right: 12)
+        aboutButton.titleLabel?.font = UIFont(name: Comfortaa.Bold, size: 20)
         aboutButton.setTitleColor(UIColor.label, for: .normal)
         aboutButton.setTitle("About", for: .normal)
         
@@ -118,11 +120,11 @@ class ProfileView: UIView {
         contactButton = UIButton(type: .system)
         contactButton.translatesAutoresizingMaskIntoConstraints = false
         
-        let iconConfiguration = UIImage.SymbolConfiguration(pointSize: 16, weight: .bold)
+        let iconConfiguration = UIImage.SymbolConfiguration(pointSize: 20, weight: .bold)
         let icon = UIImage(systemName: "phone.arrow.right", withConfiguration: iconConfiguration)?.withTintColor(UIColor.label, renderingMode: .alwaysOriginal)
         contactButton.setImage(icon, for: .normal)
-        contactButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -8, bottom: 0, right: 8)
-        contactButton.titleLabel?.font = UIFont(name: Comfortaa.Bold, size: 16)
+        contactButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -8, bottom: 0, right: 12)
+        contactButton.titleLabel?.font = UIFont(name: Comfortaa.Bold, size: 20)
         contactButton.setTitleColor(UIColor.label, for: .normal)
         contactButton.setTitle("Contact Us", for: .normal)
         
@@ -133,11 +135,11 @@ class ProfileView: UIView {
         profileButton = UIButton(type: .system)
         profileButton.translatesAutoresizingMaskIntoConstraints = false
         
-        let iconConfiguration = UIImage.SymbolConfiguration(pointSize: 16, weight: .bold)
+        let iconConfiguration = UIImage.SymbolConfiguration(pointSize: 20, weight: .bold)
         let icon = UIImage(systemName: "person.fill", withConfiguration: iconConfiguration)?.withTintColor(UIColor.label, renderingMode: .alwaysOriginal)
         profileButton.setImage(icon, for: .normal)
-        profileButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -8, bottom: 0, right: 8)
-        profileButton.titleLabel?.font = UIFont(name: Comfortaa.Bold, size: 16)
+        profileButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -8, bottom: 0, right: 12)
+        profileButton.titleLabel?.font = UIFont(name: Comfortaa.Bold, size: 20)
         profileButton.setTitleColor(UIColor.label, for: .normal)
         profileButton.setTitle("View Profile", for: .normal)
         
@@ -148,11 +150,11 @@ class ProfileView: UIView {
         settingButton = UIButton(type: .system)
         settingButton.translatesAutoresizingMaskIntoConstraints = false
         
-        let iconConfiguration = UIImage.SymbolConfiguration(pointSize: 16, weight: .bold)
+        let iconConfiguration = UIImage.SymbolConfiguration(pointSize: 20, weight: .bold)
         let icon = UIImage(systemName: "gearshape.fill", withConfiguration: iconConfiguration)?.withTintColor(UIColor.label, renderingMode: .alwaysOriginal)
         settingButton.setImage(icon, for: .normal)
-        settingButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -8, bottom: 0, right: 8)
-        settingButton.titleLabel?.font = UIFont(name: Comfortaa.Bold, size: 16)
+        settingButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -8, bottom: 0, right: 12)
+        settingButton.titleLabel?.font = UIFont(name: Comfortaa.Bold, size: 20)
         settingButton.setTitleColor(UIColor.label, for: .normal)
         settingButton.setTitle("Setting", for: .normal)
         
@@ -163,15 +165,19 @@ class ProfileView: UIView {
         logoutButton = UIButton(type: .system)
         logoutButton.translatesAutoresizingMaskIntoConstraints = false
         
-        let iconConfiguration = UIImage.SymbolConfiguration(pointSize: 16, weight: .bold)
+        let iconConfiguration = UIImage.SymbolConfiguration(pointSize: 20, weight: .bold)
         let icon = UIImage(systemName: "rectangle.portrait.and.arrow.right.fill", withConfiguration: iconConfiguration)?.withTintColor(UIColor.red, renderingMode: .alwaysOriginal)
         logoutButton.setImage(icon, for: .normal)
-        logoutButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -8, bottom: 0, right: 8)
-        logoutButton.titleLabel?.font = UIFont(name: Comfortaa.Bold, size: 16)
+        logoutButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -8, bottom: 0, right: 12)
+        logoutButton.titleLabel?.font = UIFont(name: Comfortaa.Bold, size: 20)
         logoutButton.setTitleColor(UIColor.red, for: .normal)
         logoutButton.setTitle("Log out", for: .normal)
         
         self.addSubview(logoutButton)
     }
 
+}
+
+#Preview {
+    ProfileViewController()
 }

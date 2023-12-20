@@ -10,57 +10,61 @@ import UIKit
 class TransactionTableViewCell: UITableViewCell {
     
     var containerView: UIView!
-    var wrapperCell: UITableViewCell!
     var categoryLabel: UILabel!
     var descriptionLabel: UILabel!
     var amountLabel: UILabel!
     var dateLabel: UILabel!
+    var signLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
         setupConstraint()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupView()
+        setupConstraint()
     }
     
     func setupView() {
-        setupWrapperCell()
+        
+        setupContainerView()
         setupCategoryLabel()
         setupDescriptionLabel()
         setupAmountLabel()
         setupDateLabel()
+        setupSignLabel()
     }
     
     func setupConstraint() {
         NSLayoutConstraint.activate([
-            wrapperCell.topAnchor.constraint(equalTo: self.topAnchor),
-            wrapperCell.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            wrapperCell.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            wrapperCell.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            containerView.topAnchor.constraint(equalTo: self.topAnchor, constant: 8),
+            containerView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8),
+            containerView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            containerView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             
-            containerView.topAnchor.constraint(equalTo: wrapperCell.topAnchor),
-            containerView.bottomAnchor.constraint(equalTo: wrapperCell.bottomAnchor),
-            containerView.leadingAnchor.constraint(equalTo: wrapperCell.leadingAnchor),
-            containerView.trailingAnchor.constraint(equalTo: wrapperCell.trailingAnchor),
+            categoryLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 16),
+            categoryLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16),
             
-            categoryLabel.topAnchor.constraint(equalTo: wrapperCell.topAnchor, constant: 16),
-            categoryLabel.leadingAnchor.constraint(equalTo: wrapperCell.leadingAnchor, constant: 16),
+            descriptionLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -16),
+            descriptionLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16),
+
             
-            descriptionLabel.bottomAnchor.constraint(equalTo: wrapperCell.bottomAnchor, constant: -16),
-            descriptionLabel.leadingAnchor.constraint(equalTo: wrapperCell.leadingAnchor, constant: 16),
+            amountLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 16),
+            amountLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -16),
             
-            amountLabel.topAnchor.constraint(equalTo: wrapperCell.topAnchor, constant: 16),
-            amountLabel.trailingAnchor.constraint(equalTo: wrapperCell.trailingAnchor, constant: -16),
+            signLabel.trailingAnchor.constraint(equalTo: amountLabel.leadingAnchor, constant: -8),
+            signLabel.bottomAnchor.constraint(equalTo: amountLabel.bottomAnchor),
             
-            dateLabel.bottomAnchor.constraint(equalTo: wrapperCell.bottomAnchor, constant: -16),
-            dateLabel.trailingAnchor.constraint(equalTo: wrapperCell.trailingAnchor, constant: -16)
+            dateLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -16),
+            dateLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -16),
             
+            categoryLabel.trailingAnchor.constraint(lessThanOrEqualTo: signLabel.leadingAnchor, constant: -16),
+            descriptionLabel.trailingAnchor.constraint(lessThanOrEqualTo: dateLabel.leadingAnchor, constant: -32),
+            
+            containerView.bottomAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: 16)
         ])
     }
     
@@ -69,6 +73,16 @@ class TransactionTableViewCell: UITableViewCell {
         descriptionLabel.text = transaction.description
         amountLabel.text = String(transaction.amount)
         dateLabel.text = transaction.createdTime.getStringFromDate()
+        signLabel.text = transaction.category.type == .income ? "+" : "-"
+    }
+    
+    func setupSignLabel() {
+        signLabel = UILabel()
+        signLabel.translatesAutoresizingMaskIntoConstraints = false
+        signLabel.font = UIFont(name: Comfortaa.Bold, size: 24)
+        signLabel.textColor = UIColor.label
+        signLabel.numberOfLines = 1
+        containerView.addSubview(signLabel)
     }
     
     func setupDateLabel() {
@@ -77,7 +91,7 @@ class TransactionTableViewCell: UITableViewCell {
         dateLabel.textColor = UIColor.label
         dateLabel.numberOfLines = 1
         dateLabel.translatesAutoresizingMaskIntoConstraints = false
-        wrapperCell.contentView.addSubview(dateLabel)
+        containerView.addSubview(dateLabel)
     }
     
     func setupAmountLabel() {
@@ -86,7 +100,7 @@ class TransactionTableViewCell: UITableViewCell {
         amountLabel.textColor = UIColor.label
         amountLabel.translatesAutoresizingMaskIntoConstraints = false
         amountLabel.numberOfLines = 1
-        wrapperCell.contentView.addSubview(amountLabel)
+        containerView.addSubview(amountLabel)
     }
     
     func setupDescriptionLabel() {
@@ -95,23 +109,16 @@ class TransactionTableViewCell: UITableViewCell {
         descriptionLabel.textColor = UIColor.label
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         descriptionLabel.numberOfLines = 1
-        wrapperCell.contentView.addSubview(descriptionLabel)
+        containerView.addSubview(descriptionLabel)
     }
     
     func setupCategoryLabel() {
         categoryLabel = UILabel()
         categoryLabel.font = UIFont(name: Comfortaa.Bold, size: 24)
         categoryLabel.textColor = UIColor.label
-        descriptionLabel.numberOfLines = 1
+        categoryLabel.numberOfLines = 1
         categoryLabel.translatesAutoresizingMaskIntoConstraints = false
-        wrapperCell.contentView.addSubview(categoryLabel)
-    }
-    
-    func setupWrapperCell() {
-        wrapperCell = UITableViewCell()
-        wrapperCell.backgroundColor = UIColor.secondarySystemBackground
-        wrapperCell.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(wrapperCell)
+        containerView.addSubview(categoryLabel)
     }
     
     func setupContainerView() {
@@ -121,7 +128,11 @@ class TransactionTableViewCell: UITableViewCell {
         containerView.clipsToBounds = true
         containerView.translatesAutoresizingMaskIntoConstraints = false
 
-        wrapperCell.contentView.addSubview(containerView)
+        self.contentView.addSubview(containerView)
     }
 
+}
+
+#Preview {
+    TransactionViewController()
 }

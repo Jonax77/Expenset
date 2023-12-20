@@ -9,6 +9,7 @@ import UIKit
 
 class TransactionView: UIView {
     
+    var searchBar: UISearchBar!
     var timeRangeMenuButton: UIButton!
     var categoryMenuButton: UIButton!
     var addNewCategoryButton: UIButton!
@@ -26,6 +27,7 @@ class TransactionView: UIView {
     }
     
     func setupView() {
+        setupSearchBar()
         setupTimeRangeMenuButton()
         setupCategoryMenuButton()
         setupAddNewCategoryButton()
@@ -34,22 +36,44 @@ class TransactionView: UIView {
     
     func setupConstraint() {
         NSLayoutConstraint.activate([
-            timeRangeMenuButton.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 24),
-            timeRangeMenuButton.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            searchBar.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 16),
+            searchBar.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            searchBar.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            searchBar.heightAnchor.constraint(equalToConstant: 40),
+            
+            timeRangeMenuButton.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 24),
+            timeRangeMenuButton.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 32),
             
             categoryMenuButton.topAnchor.constraint(equalTo: timeRangeMenuButton.topAnchor),
             categoryMenuButton.leadingAnchor.constraint(equalTo: timeRangeMenuButton.trailingAnchor, constant: 16),
             
             addNewCategoryButton.topAnchor.constraint(equalTo: timeRangeMenuButton.topAnchor),
-            addNewCategoryButton.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            addNewCategoryButton.heightAnchor.constraint(equalToConstant: 24),
-            addNewCategoryButton.widthAnchor.constraint(equalToConstant: 24)
+            addNewCategoryButton.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -32),
+            addNewCategoryButton.heightAnchor.constraint(equalToConstant: 32),
+            addNewCategoryButton.widthAnchor.constraint(equalToConstant: 32),
+            
+            transactionTableView.topAnchor.constraint(equalTo: timeRangeMenuButton.bottomAnchor, constant: 32),
+            transactionTableView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 32),
+            transactionTableView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -32),
+            transactionTableView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -16)
         ])
+    }
+    
+    func setupSearchBar() {
+        searchBar = UISearchBar()
+        searchBar.backgroundColor = .clear
+        searchBar.searchBarStyle = .minimal
+        searchBar.searchTextField.layer.cornerRadius = 8
+        searchBar.searchTextField.font = UIFont(name: Comfortaa.Regular, size: 18)
+        searchBar.placeholder = "Search description..."
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(searchBar)
     }
     
     func setupTableView() {
         transactionTableView = UITableView()
         transactionTableView.register(TransactionTableViewCell.self, forCellReuseIdentifier: Config.transactionTableCellID)
+        transactionTableView.separatorStyle = .none
         transactionTableView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(transactionTableView)
     }
@@ -85,4 +109,8 @@ class TransactionView: UIView {
         self.addSubview(categoryMenuButton)
     }
 
+}
+
+#Preview {
+    TransactionViewController()
 }

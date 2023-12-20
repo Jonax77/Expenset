@@ -12,7 +12,6 @@
 		8E47C9AA2B1DDE84002E213E /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9A92B1DDE84002E213E /* CreateViewController.swift */; };
 		8E47C9AC2B1DDE8F002E213E /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9AB2B1DDE8F002E213E /* ReportViewController.swift */; };
 		8E47C9AE2B1DDF8C002E213E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9AD2B1DDF8C002E213E /* ProfileViewController.swift */; };
-		8E47C9B02B1E898F002E213E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9AF2B1E898F002E213E /* LoginViewController.swift */; };
 		8E47C9B22B1E899D002E213E /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9B12B1E899D002E213E /* SignupViewController.swift */; };
 		8E47C9B42B1E89C8002E213E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9B32B1E89C8002E213E /* LoginView.swift */; };
 		8E47C9B62B1E89D9002E213E /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47C9B52B1E89D9002E213E /* SignupView.swift */; };
@@ -50,6 +49,22 @@
 		8E47CA062B296D43002E213E /* CreateFIrebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47CA052B296D43002E213E /* CreateFIrebaseManager.swift */; };
 		8E47CA082B2A8F55002E213E /* UnderlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47CA072B2A8F55002E213E /* UnderlineView.swift */; };
 		8E47CA0B2B2A9F59002E213E /* TransactionTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47CA0A2B2A9F59002E213E /* TransactionTableViewManager.swift */; };
+		8E47CA0E2B2AE4CE002E213E /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E47CA0D2B2AE4CE002E213E /* BarChart.swift */; };
+		8E64B4582B2C3D9A00790D47 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64B4572B2C3D9A00790D47 /* PieChart.swift */; };
+		8E64B45A2B2E400800790D47 /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64B4592B2E400800790D47 /* ProfileDetailViewController.swift */; };
+		8E64B45C2B2E9E1600790D47 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64B45B2B2E9E1600790D47 /* EditProfileViewController.swift */; };
+		8E64B4612B2EA25D00790D47 /* SubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64B4602B2EA25D00790D47 /* SubmitButton.swift */; };
+		8E64B4632B2ECCDA00790D47 /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64B4622B2ECCDA00790D47 /* InputField.swift */; };
+		8E64B4652B2F82C800790D47 /* EditProfilePhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64B4642B2F82C800790D47 /* EditProfilePhotoManager.swift */; };
+		8E64B4672B2F839800790D47 /* EditProfileLoadingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64B4662B2F839800790D47 /* EditProfileLoadingManager.swift */; };
+		8E64B4692B2F83DD00790D47 /* EditProfileFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64B4682B2F83DD00790D47 /* EditProfileFirebaseManager.swift */; };
+		8E64B46B2B2FC53700790D47 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64B46A2B2FC53700790D47 /* UIImageExtension.swift */; };
+		8E64B46D2B2FF0A400790D47 /* SimpleTransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64B46C2B2FF0A400790D47 /* SimpleTransactionTableViewCell.swift */; };
+		8E64B46F2B301B7B00790D47 /* TransactionDetailMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64B46E2B301B7B00790D47 /* TransactionDetailMenuManager.swift */; };
+		8E64B4712B329C1C00790D47 /* HomeTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64B4702B329C1C00790D47 /* HomeTableViewManager.swift */; };
+		8E64B4752B32CDA800790D47 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64B4742B32CDA800790D47 /* LoginViewController.swift */; };
+		8E64B4772B32D87200790D47 /* TransactionLoadingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64B4762B32D87200790D47 /* TransactionLoadingManager.swift */; };
+		8E64B4792B336E3E00790D47 /* ProfileLoadingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64B4782B336E3E00790D47 /* ProfileLoadingManager.swift */; };
 		8E931F072B0C6AF0005EF0AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E931F062B0C6AF0005EF0AA /* AppDelegate.swift */; };
 		8E931F092B0C6AF0005EF0AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E931F082B0C6AF0005EF0AA /* SceneDelegate.swift */; };
 		8E931F0B2B0C6AF0005EF0AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E931F0A2B0C6AF0005EF0AA /* ViewController.swift */; };
@@ -70,7 +85,6 @@
 		8E47C9A92B1DDE84002E213E /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		8E47C9AB2B1DDE8F002E213E /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		8E47C9AD2B1DDF8C002E213E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		8E47C9AF2B1E898F002E213E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8E47C9B12B1E899D002E213E /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		8E47C9B32B1E89C8002E213E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		8E47C9B52B1E89D9002E213E /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
@@ -108,6 +122,22 @@
 		8E47CA052B296D43002E213E /* CreateFIrebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFIrebaseManager.swift; sourceTree = "<group>"; };
 		8E47CA072B2A8F55002E213E /* UnderlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineView.swift; sourceTree = "<group>"; };
 		8E47CA0A2B2A9F59002E213E /* TransactionTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewManager.swift; sourceTree = "<group>"; };
+		8E47CA0D2B2AE4CE002E213E /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
+		8E64B4572B2C3D9A00790D47 /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
+		8E64B4592B2E400800790D47 /* ProfileDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewController.swift; sourceTree = "<group>"; };
+		8E64B45B2B2E9E1600790D47 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		8E64B4602B2EA25D00790D47 /* SubmitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitButton.swift; sourceTree = "<group>"; };
+		8E64B4622B2ECCDA00790D47 /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
+		8E64B4642B2F82C800790D47 /* EditProfilePhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfilePhotoManager.swift; sourceTree = "<group>"; };
+		8E64B4662B2F839800790D47 /* EditProfileLoadingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileLoadingManager.swift; sourceTree = "<group>"; };
+		8E64B4682B2F83DD00790D47 /* EditProfileFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileFirebaseManager.swift; sourceTree = "<group>"; };
+		8E64B46A2B2FC53700790D47 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		8E64B46C2B2FF0A400790D47 /* SimpleTransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTransactionTableViewCell.swift; sourceTree = "<group>"; };
+		8E64B46E2B301B7B00790D47 /* TransactionDetailMenuManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailMenuManager.swift; sourceTree = "<group>"; };
+		8E64B4702B329C1C00790D47 /* HomeTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewManager.swift; sourceTree = "<group>"; };
+		8E64B4742B32CDA800790D47 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8E64B4762B32D87200790D47 /* TransactionLoadingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionLoadingManager.swift; sourceTree = "<group>"; };
+		8E64B4782B336E3E00790D47 /* ProfileLoadingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLoadingManager.swift; sourceTree = "<group>"; };
 		8E931F032B0C6AF0005EF0AA /* Expenset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expenset.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E931F062B0C6AF0005EF0AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E931F082B0C6AF0005EF0AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -195,6 +225,7 @@
 		8E47C9E72B1FDF9E002E213E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				8E64B4702B329C1C00790D47 /* HomeTableViewManager.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -203,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				8E47C9CE2B1EE26F002E213E /* HomeView.swift */,
+				8E64B46C2B2FF0A400790D47 /* SimpleTransactionTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -232,6 +264,10 @@
 		8E47C9F92B22B6E6002E213E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				8E64B4642B2F82C800790D47 /* EditProfilePhotoManager.swift */,
+				8E64B4662B2F839800790D47 /* EditProfileLoadingManager.swift */,
+				8E64B4682B2F83DD00790D47 /* EditProfileFirebaseManager.swift */,
+				8E64B4782B336E3E00790D47 /* ProfileLoadingManager.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -251,8 +287,29 @@
 			isa = PBXGroup;
 			children = (
 				8E47CA0A2B2A9F59002E213E /* TransactionTableViewManager.swift */,
+				8E64B46E2B301B7B00790D47 /* TransactionDetailMenuManager.swift */,
+				8E64B4762B32D87200790D47 /* TransactionLoadingManager.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		8E47CA0C2B2AE4B9002E213E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E47CA0D2B2AE4CE002E213E /* BarChart.swift */,
+				8E64B4572B2C3D9A00790D47 /* PieChart.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E64B45D2B2EA1E100790D47 /* PublicUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				8E47C9BC2B1E9655002E213E /* Loading */,
+				8E64B4602B2EA25D00790D47 /* SubmitButton.swift */,
+				8E64B4622B2ECCDA00790D47 /* InputField.swift */,
+			);
+			path = PublicUIKit;
 			sourceTree = "<group>";
 		};
 		8E931EFA2B0C6AF0005EF0AA = {
@@ -274,8 +331,8 @@
 		8E931F052B0C6AF0005EF0AA /* Expenset */ = {
 			isa = PBXGroup;
 			children = (
+				8E64B45D2B2EA1E100790D47 /* PublicUIKit */,
 				8E47C9DA2B1EE8F9002E213E /* Font */,
-				8E47C9BC2B1E9655002E213E /* Loading */,
 				8E931F2F2B1DA3AF005EF0AA /* Constant */,
 				8E931F2E2B1DA332005EF0AA /* Utils */,
 				8E931F2D2B1DA32A005EF0AA /* Firebase */,
@@ -341,6 +398,7 @@
 		8E931F292B1DA2D6005EF0AA /* Report Screen */ = {
 			isa = PBXGroup;
 			children = (
+				8E47CA0C2B2AE4B9002E213E /* View */,
 				8E47C9AB2B1DDE8F002E213E /* ReportViewController.swift */,
 				8E47C9D22B1EE423002E213E /* ReportView.swift */,
 			);
@@ -353,6 +411,8 @@
 				8E47C9F92B22B6E6002E213E /* Extension */,
 				8E47C9F82B22B6CF002E213E /* View */,
 				8E47C9AD2B1DDF8C002E213E /* ProfileViewController.swift */,
+				8E64B4592B2E400800790D47 /* ProfileDetailViewController.swift */,
+				8E64B45B2B2E9E1600790D47 /* EditProfileViewController.swift */,
 			);
 			path = "Profile Screen";
 			sourceTree = "<group>";
@@ -361,8 +421,8 @@
 			isa = PBXGroup;
 			children = (
 				8E47C9C32B1EA93D002E213E /* Extension */,
-				8E47C9AF2B1E898F002E213E /* LoginViewController.swift */,
 				8E47C9B32B1E89C8002E213E /* LoginView.swift */,
+				8E64B4742B32CDA800790D47 /* LoginViewController.swift */,
 			);
 			path = "Login Screen";
 			sourceTree = "<group>";
@@ -389,6 +449,7 @@
 			isa = PBXGroup;
 			children = (
 				8E47C9F02B216D2F002E213E /* DateFormatter.swift */,
+				8E64B46A2B2FC53700790D47 /* UIImageExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -436,7 +497,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1410;
-				LastUpgradeCheck = 1410;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					8E931F022B0C6AF0005EF0AA = {
 						CreatedOnToolsVersion = 14.1;
@@ -489,22 +550,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E47CA0B2B2A9F59002E213E /* TransactionTableViewManager.swift in Sources */,
+				8E64B4752B32CDA800790D47 /* LoginViewController.swift in Sources */,
 				8E47CA022B2966BB002E213E /* CreatePhotoManager.swift in Sources */,
 				8E47C9CD2B1EE134002E213E /* CreateView.swift in Sources */,
 				8E47C9CB2B1EB00F002E213E /* BaseFirebaseManager.swift in Sources */,
 				8E47C9AC2B1DDE8F002E213E /* ReportViewController.swift in Sources */,
+				8E64B4582B2C3D9A00790D47 /* PieChart.swift in Sources */,
+				8E64B46F2B301B7B00790D47 /* TransactionDetailMenuManager.swift in Sources */,
 				8E47C9C02B1E96B7002E213E /* LoadingDelegate.swift in Sources */,
 				8E47C9A62B1DDE66002E213E /* HomeViewController.swift in Sources */,
 				8E47CA062B296D43002E213E /* CreateFIrebaseManager.swift in Sources */,
 				8E47C9B22B1E899D002E213E /* SignupViewController.swift in Sources */,
+				8E64B45C2B2E9E1600790D47 /* EditProfileViewController.swift in Sources */,
+				8E64B45A2B2E400800790D47 /* ProfileDetailViewController.swift in Sources */,
+				8E64B4672B2F839800790D47 /* EditProfileLoadingManager.swift in Sources */,
 				8E47C9BE2B1E96A5002E213E /* LoadingViewController.swift in Sources */,
 				8E47C9A82B1DDE77002E213E /* TransactionViewController.swift in Sources */,
 				8E47C9C72B1EA9F3002E213E /* LoginFirebaseManager.swift in Sources */,
+				8E64B4692B2F83DD00790D47 /* EditProfileFirebaseManager.swift in Sources */,
+				8E64B4712B329C1C00790D47 /* HomeTableViewManager.swift in Sources */,
 				8E47C9C22B1EA6F9002E213E /* SignupPhotoManager.swift in Sources */,
 				8E47C9AA2B1DDE84002E213E /* CreateViewController.swift in Sources */,
 				8E47CA002B29669B002E213E /* CreatePickerManager.swift in Sources */,
 				8E931F312B1DA3C9005EF0AA /* FirebaseModel.swift in Sources */,
 				8E47C9F52B217167002E213E /* TransactionDetailView.swift in Sources */,
+				8E47CA0E2B2AE4CE002E213E /* BarChart.swift in Sources */,
 				8E47C9B92B1E92DC002E213E /* SignupFirebaseManager.swift in Sources */,
 				8E47C9F72B227BDB002E213E /* TransactionDetailViewController.swift in Sources */,
 				8E47C9B42B1E89C8002E213E /* LoginView.swift in Sources */,
@@ -517,19 +587,25 @@
 				8E47C9D12B1EE31D002E213E /* TransactionView.swift in Sources */,
 				8E47CA082B2A8F55002E213E /* UnderlineView.swift in Sources */,
 				8E47C9D32B1EE423002E213E /* ReportView.swift in Sources */,
+				8E64B46B2B2FC53700790D47 /* UIImageExtension.swift in Sources */,
 				8E47C9F12B216D2F002E213E /* DateFormatter.swift in Sources */,
-				8E47C9B02B1E898F002E213E /* LoginViewController.swift in Sources */,
 				8E47C9ED2B203CC9002E213E /* AddNewCategoryView.swift in Sources */,
 				8E47CA042B29683C002E213E /* CreateLoadingManager.swift in Sources */,
 				8E47C9BB2B1E9464002E213E /* SignupLoadingManager.swift in Sources */,
+				8E64B46D2B2FF0A400790D47 /* SimpleTransactionTableViewCell.swift in Sources */,
 				8E47C9EB2B1FECE3002E213E /* TransactionTableViewCell.swift in Sources */,
 				8E47C9EF2B205491002E213E /* AddNewCategoryViewController.swift in Sources */,
 				8E47C9B62B1E89D9002E213E /* SignupView.swift in Sources */,
 				8E931F092B0C6AF0005EF0AA /* SceneDelegate.swift in Sources */,
+				8E64B4792B336E3E00790D47 /* ProfileLoadingManager.swift in Sources */,
 				8E47C9F32B217085002E213E /* Config.swift in Sources */,
+				8E64B4772B32D87200790D47 /* TransactionLoadingManager.swift in Sources */,
 				8E47C9FB2B281E69002E213E /* ProfileDetailView.swift in Sources */,
 				8E47C9CF2B1EE26F002E213E /* HomeView.swift in Sources */,
 				8E47C9C52B1EA99C002E213E /* LoginLoadingManager.swift in Sources */,
+				8E64B4652B2F82C800790D47 /* EditProfilePhotoManager.swift in Sources */,
+				8E64B4612B2EA25D00790D47 /* SubmitButton.swift in Sources */,
+				8E64B4632B2ECCDA00790D47 /* InputField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,6 +667,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -651,6 +728,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -684,6 +762,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -712,6 +791,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
