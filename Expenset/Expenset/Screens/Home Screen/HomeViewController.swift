@@ -10,7 +10,7 @@ import UIKit
 class HomeViewController: UIViewController {
     
     let homeView = HomeView()
-    var transactionData: [Transaction] = [.init(amount: 5000, category: .init(name: "Grocery", type: .expense), createdTime: Date()), .init(amount: 5000, category: .init(name: "Grocery", type: .expense), createdTime: Date())]
+    var transactionData: [Transaction] = [.init(amount: 5000, category: .init(name: "Grocery", type: .expense), timestamp: Date()), .init(amount: 5000, category: .init(name: "Grocery", type: .expense), timestamp: Date())]
     
     override func loadView() {
         view = homeView

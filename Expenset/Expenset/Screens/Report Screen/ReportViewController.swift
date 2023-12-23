@@ -9,17 +9,16 @@ import UIKit
 
 class ReportViewController: UIViewController {
     
-    let vv = SignupView()
+    let reportView = ReportView()
     
     override func loadView() {
-        view = vv
+        view = reportView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTitle()
-        // Do any additional setup after loading the view.
     }
     
 

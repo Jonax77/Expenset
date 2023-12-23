@@ -9,30 +9,36 @@ import SwiftUI
 import Charts
 
 struct BarChart: View {
-    private var coffeeSales = [
-        (name: "Americano", count: 120),
-        (name: "Cappuccino", count: 234),
-        (name: "Espresso", count: 62),
-        (name: "Latte", count: 625),
-        (name: "Mocha", count: 320),
-        (name: "Affogato", count: 50)
+    
+    @State private var data: [TransactionSummary] = [
+        .init(startDate: Date(timeIntervalSinceNow: TimeInterval(integerLiteral: 991000)), endDate: Date(), type: .expense, category: Category(name: "Grocery", type: .expense), totalAmount: 1000),
+        .init(startDate: Date(timeIntervalSinceNow: TimeInterval(integerLiteral: 551000)), endDate: Date(), type: .expense, category: Category(name: "Shopping", type: .expense), totalAmount: 5000),
+        .init(startDate: Date(timeIntervalSinceNow: TimeInterval(integerLiteral: 1000)), endDate: Date(), type: .expense, category: Category(name: "Rent", type: .expense), totalAmount: 2000),
     ]
     
     var body: some View {
         VStack {
-            Chart {
-                ForEach(coffeeSales, id: \.name) { coffee in
-                    BarMark(
-                        x: .value("Type", coffee.name),
-                        y: .value("Cup", coffee.count)
-                    )
-                    .foregroundStyle(by: .value("Type", coffee.name))
+            GroupBox {
+                Chart {
+                    ForEach(data) { summary in
+                        BarMark(x: .value("Category", summary.category?.name ?? ""), y: .value("Total Amount", summary.totalAmount))
+                            .cornerRadius(16)
+                            .foregroundStyle(Color.label)
+                    }
                 }
-            }
+            } label: {
+                Text("Hello").font(.custom(Comfortaa.Bold, size: 24))
+            }                
+//            .chartForegroundStyleScale(
+//                domain: data.map  { $0.weekdayString },
+//                range: Color.chartColors
+//            )
+            
         }
-        .padding()
+
     }
 }
+
 
 #Preview {
     BarChart()

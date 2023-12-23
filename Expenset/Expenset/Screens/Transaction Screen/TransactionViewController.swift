@@ -16,7 +16,7 @@ class TransactionViewController: UIViewController {
     var categoryMenu: UIMenu!
     
     
-    var transactionData: [Transaction] = [Transaction(amount: 15, category: Category(name: "Grodfsdfsdfsfscery", type: .expense), description: "aadfkjsljfs,dm,.fm,.cxmgksdgjeiurout", createdTime: Date()), Transaction(amount: 15, category: Category(name: "Grodfsdfsdfsfscery", type: .expense), description: "aadfkjsljfs,dm,.fm,.cxmgksdgjeiurout", createdTime: Date())]
+    var transactionData: [Transaction] = [Transaction(amount: 15, category: Category(name: "Grodfsdfsdfsfscery", type: .expense), description: "aadfkjsljfs,dm,.fm,.cxmgksdgjeiurout", timestamp: Date()), Transaction(amount: 15, category: Category(name: "Grodfsdfsdfsfscery", type: .expense), description: "aadfkjsljfs,dm,.fm,.cxmgksdgjeiurout", timestamp: Date())]
     
     let transactionView = TransactionView()
     

@@ -72,7 +72,7 @@ class TransactionTableViewCell: UITableViewCell {
         categoryLabel.text = transaction.category.name
         descriptionLabel.text = transaction.description
         amountLabel.text = String(transaction.amount)
-        dateLabel.text = transaction.createdTime.getStringFromDate()
+        dateLabel.text = transaction.timestamp.getStringFromDate()
         signLabel.text = transaction.category.type == .income ? "+" : "-"
     }
     

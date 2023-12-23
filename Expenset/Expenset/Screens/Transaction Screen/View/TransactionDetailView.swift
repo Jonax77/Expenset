@@ -37,7 +37,7 @@ class TransactionDetailView: UIView {
         categoryLabel.text = transaction.category.name
         amountLabel.text = String(transaction.amount)
         descriptionLabel.text = transaction.description
-        dateLabel.text = transaction.createdTime.getStringFromDate()
+        dateLabel.text = transaction.timestamp.getStringFromDate()
         
     }
     

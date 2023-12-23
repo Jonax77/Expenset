@@ -65,6 +65,9 @@
 		8E64B4752B32CDA800790D47 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64B4742B32CDA800790D47 /* LoginViewController.swift */; };
 		8E64B4772B32D87200790D47 /* TransactionLoadingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64B4762B32D87200790D47 /* TransactionLoadingManager.swift */; };
 		8E64B4792B336E3E00790D47 /* ProfileLoadingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64B4782B336E3E00790D47 /* ProfileLoadingManager.swift */; };
+		8E64B47B2B33D35C00790D47 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64B47A2B33D35C00790D47 /* LineChart.swift */; };
+		8E64B47D2B353FB400790D47 /* PublicGroupBoxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64B47C2B353FB400790D47 /* PublicGroupBoxStyle.swift */; };
+		8E64B47F2B355F1D00790D47 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64B47E2B355F1D00790D47 /* ColorExtension.swift */; };
 		8E931F072B0C6AF0005EF0AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E931F062B0C6AF0005EF0AA /* AppDelegate.swift */; };
 		8E931F092B0C6AF0005EF0AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E931F082B0C6AF0005EF0AA /* SceneDelegate.swift */; };
 		8E931F0B2B0C6AF0005EF0AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E931F0A2B0C6AF0005EF0AA /* ViewController.swift */; };
@@ -138,6 +141,9 @@
 		8E64B4742B32CDA800790D47 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8E64B4762B32D87200790D47 /* TransactionLoadingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionLoadingManager.swift; sourceTree = "<group>"; };
 		8E64B4782B336E3E00790D47 /* ProfileLoadingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLoadingManager.swift; sourceTree = "<group>"; };
+		8E64B47A2B33D35C00790D47 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
+		8E64B47C2B353FB400790D47 /* PublicGroupBoxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicGroupBoxStyle.swift; sourceTree = "<group>"; };
+		8E64B47E2B355F1D00790D47 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		8E931F032B0C6AF0005EF0AA /* Expenset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expenset.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E931F062B0C6AF0005EF0AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E931F082B0C6AF0005EF0AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -296,8 +302,10 @@
 		8E47CA0C2B2AE4B9002E213E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8E47C9D22B1EE423002E213E /* ReportView.swift */,
 				8E47CA0D2B2AE4CE002E213E /* BarChart.swift */,
 				8E64B4572B2C3D9A00790D47 /* PieChart.swift */,
+				8E64B47A2B33D35C00790D47 /* LineChart.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -308,6 +316,7 @@
 				8E47C9BC2B1E9655002E213E /* Loading */,
 				8E64B4602B2EA25D00790D47 /* SubmitButton.swift */,
 				8E64B4622B2ECCDA00790D47 /* InputField.swift */,
+				8E64B47C2B353FB400790D47 /* PublicGroupBoxStyle.swift */,
 			);
 			path = PublicUIKit;
 			sourceTree = "<group>";
@@ -400,7 +409,6 @@
 			children = (
 				8E47CA0C2B2AE4B9002E213E /* View */,
 				8E47C9AB2B1DDE8F002E213E /* ReportViewController.swift */,
-				8E47C9D22B1EE423002E213E /* ReportView.swift */,
 			);
 			path = "Report Screen";
 			sourceTree = "<group>";
@@ -450,6 +458,7 @@
 			children = (
 				8E47C9F02B216D2F002E213E /* DateFormatter.swift */,
 				8E64B46A2B2FC53700790D47 /* UIImageExtension.swift */,
+				8E64B47E2B355F1D00790D47 /* ColorExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -560,6 +569,7 @@
 				8E47C9C02B1E96B7002E213E /* LoadingDelegate.swift in Sources */,
 				8E47C9A62B1DDE66002E213E /* HomeViewController.swift in Sources */,
 				8E47CA062B296D43002E213E /* CreateFIrebaseManager.swift in Sources */,
+				8E64B47D2B353FB400790D47 /* PublicGroupBoxStyle.swift in Sources */,
 				8E47C9B22B1E899D002E213E /* SignupViewController.swift in Sources */,
 				8E64B45C2B2E9E1600790D47 /* EditProfileViewController.swift in Sources */,
 				8E64B45A2B2E400800790D47 /* ProfileDetailViewController.swift in Sources */,
@@ -583,9 +593,11 @@
 				8E47C9FD2B281E7D002E213E /* EditProfileView.swift in Sources */,
 				8E931F0B2B0C6AF0005EF0AA /* ViewController.swift in Sources */,
 				8E47C9AE2B1DDF8C002E213E /* ProfileViewController.swift in Sources */,
+				8E64B47B2B33D35C00790D47 /* LineChart.swift in Sources */,
 				8E931F072B0C6AF0005EF0AA /* AppDelegate.swift in Sources */,
 				8E47C9D12B1EE31D002E213E /* TransactionView.swift in Sources */,
 				8E47CA082B2A8F55002E213E /* UnderlineView.swift in Sources */,
+				8E64B47F2B355F1D00790D47 /* ColorExtension.swift in Sources */,
 				8E47C9D32B1EE423002E213E /* ReportView.swift in Sources */,
 				8E64B46B2B2FC53700790D47 /* UIImageExtension.swift in Sources */,
 				8E47C9F12B216D2F002E213E /* DateFormatter.swift in Sources */,

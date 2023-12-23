@@ -46,6 +46,13 @@ struct Category {
             }
             
         }
+        
+        var stringValue: String {
+            switch self {
+                case .income: return "income"
+                case .expense: return "expense"
+            }
+        }
     }
     
     @DocumentID var id: String?
@@ -58,12 +65,31 @@ struct Transaction {
     var amount: Double
     var category: Category
     var description: String?
-    var createdTime: Date
+    var timestamp: Date
     var image: String? // image link
 }
 
-struct totalByCategory: Identifiable {
+struct TransactionSummary: Identifiable {
     let id = UUID()
-    var name: String
-    var value: Double
+    var startDate: Date
+    var endDate: Date
+    var type: Category.CategoryType
+    var category: Category?
+    var totalAmount: Double = 0 // 设置默认值为0
+    
+    
+    var weekdayString: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyyMMdd"
+        dateFormatter.dateStyle = .long
+        dateFormatter.timeStyle = .none
+        dateFormatter.locale = Locale(identifier: "en_US")
+        return  dateFormatter.string(from: startDate)
+    }
+    
+    var shortDay: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEE"
+        return  dateFormatter.string(from: startDate)
+    }
 }
