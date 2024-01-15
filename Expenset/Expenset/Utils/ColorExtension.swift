@@ -10,6 +10,7 @@ import SwiftUI
 
 extension Color {
     static let label = Color(uiColor: UIColor.label)
+    static let secondaryLabel = Color(uiColor: UIColor.secondaryLabel)
     static let systemBackground = Color(uiColor: UIColor.systemBackground)
     static let chartColors: [Color] = [
         Color(red: 0.55, green: 0.83 , blue: 0.78),
